@@ -5,4 +5,4 @@ R209 - Web
 
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMWHyRCE=/?moveToViewport=-1738,-563,3737,1737&embedId=932528823392" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
-[![Salut](https://miro.com/app/live-embed/uXjVMWHyRCE=/?moveToViewport=-1738,-563,3737,1737&embedId=932528823392)](https://miro.com/app/live-embed/uXjVMWHyRCE=/?moveToViewport=-1738,-563,3737,1737&embedId=932528823392)
+[![Le Tablo](https://imgur.com/IxQ1rdE)](https://miro.com/app/live-embed/uXjVMWHyRCE=/?moveToViewport=-1738,-563,3737,1737&embedId=932528823392)
