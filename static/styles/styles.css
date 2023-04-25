@@ -1,0 +1,13 @@
+.banner{
+    background-color: aquamarine;
+    position: relative;
+    border: 2px solid black;
+    box-shadow: 2px 2px 3px black;
+    padding: 5px;
+}
+.banner .titre{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
