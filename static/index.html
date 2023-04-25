@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>mainpage</title>
+    <title>Mainpage</title>
 </head>
 <body>
     <div class="banner">
-        <div  class="titre"></div>
-            <h1>MENU</h1>
+        <div class="titre">
+            <h1>Mascaroni.fr</h1>
         </div>
         <div class="panier">
-            Panier
+            <button>Panier</button>
         </div>
+    </div>
+    <div class="container">
+        <h1>Quel plat voulez vous ?</h1>
+        <form action="http://localhost:5000/login" method="POST">
+          <input type="text" name="sourate" placeholder="ex : 'Tajine' ">
+          <input type="submit" value="Chercher">
+        </form>
     </div>
 </body>
 </html>
