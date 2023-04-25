@@ -75,3 +75,41 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .lsite {
+    border: 2px solid #dcdcdc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    align-self: flex-end;
+    flex-wrap: wrap;
+  }
+  .lsite ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .lsite li {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .lsite li:hover {
+    background-color: #f7f7f7;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .lsite ul {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+  }
