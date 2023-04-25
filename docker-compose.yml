@@ -1,9 +1,9 @@
-version: '2'
+version: '3'
 services:
-  php:
-    build: php
-    ports:
-      - "80:80"
-      - "443:443"
+  php-apache-environment:
+    container_name: php-apache
+    image: php:8.0-apache
     volumes:
-      - ./php/www:/var/www/html
+      - ./php/src:/var/www/html/
+    ports:
+      - 8000:80
