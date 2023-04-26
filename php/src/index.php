@@ -1,24 +1,10 @@
 <?php
-$db = new SQLite3('test.sqlite', SQLITE3_OPEN_READWRITE);
-
-// Create a table.
-$db->query(
-'CREATE TABLE IF NOT EXISTS "users" (
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "name" VARCHAR
-  )'
-);
-
-// Insert some sample data.
-$db->query('INSERT INTO "users" ("name") VALUES ("Karl")');
-$db->query('INSERT INTO "users" ("name") VALUES ("Linda")');
-$db->query('INSERT INTO "users" ("name") VALUES ("John")');
+$db = new SQLite3('/var/www/html/test.sqlite', SQLITE3_OPEN_READWRITE); // Il faut imperativement que le fichier soit en .sqlite
 
 // Get a count of the number of users
-$userCount = $db->querySingle('SELECT COUNT(DISTINCT "id") FROM "users"');
-echo("User count: $userCount\n");
+$compo = $db->querySingle('SELECT * FROM machine');
+echo($compo);
 
 // Close the connection
 $db->close();
-echo "Si tu me vois ça marche mon reuf";
 ?>
