@@ -7,6 +7,11 @@ $compo = $db->querySingle('SELECT * FROM composant');
 echo($compo);
 
 // Close the connection
+<<<<<<< HEAD
+//$db->close();
+include ("/var/www/html/static/plat.html");
+=======
 $db->close();
 include ("/var/www/html/static/mainapage.html");
+>>>>>>> a0205d0b5b8b8762d75c33ee03978d2980360c60
 ?>
