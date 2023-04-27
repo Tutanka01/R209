@@ -78,6 +78,7 @@
   .lsite {
     border: 2px solid #dcdcdc;
     padding: 20px;
+    justify-content: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -110,6 +111,7 @@
 
   .lsite .container_lsite {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     border: 2px solid #0066cc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
