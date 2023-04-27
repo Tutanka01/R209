@@ -19,3 +19,4 @@ Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il
     docker-compose up -d
 ```
 - Aller sur http://localhost:8080
+- test
