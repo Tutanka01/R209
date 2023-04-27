@@ -8,5 +8,5 @@
 
 // Close the connection
 //$db->close();
-include ("/var/www/html/static/categorie.html");
+include ("/var/www/html/static/plat.html");
 ?>
