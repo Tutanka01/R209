@@ -65,8 +65,33 @@
 .container .descriptif {
     display: inline-block;
     float: left;
+    width: 300px;
+    text-align: center;
 }
 .container .cats{
     display: inline-block;
     float: bottom;
 }
+
+.container .actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 50px;
+    }
+    
+    .container .actions button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    margin: 10px;
+    }
