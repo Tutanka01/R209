@@ -19,4 +19,15 @@ Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il
     docker-compose up -d
 ```
 - Aller sur http://localhost:8080
-- test 4212
+## Voila a quoi ça ressemble par le moment 
+Mainpage :
+![Mainpage](mainpage.png)
+
+Categories :
+![Cats](cats.png)
+
+Plats :
+![Plats](plats.png)
+
+Panier :
+![Panier](panier.png)

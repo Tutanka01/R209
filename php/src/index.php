@@ -8,5 +8,5 @@ echo($compo);
 
 // Close the connection
 $db->close();
-include ("/var/www/html/static/plat.html");
+include ("/var/www/html/static/panier.html");
 ?>
