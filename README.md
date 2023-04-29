@@ -21,13 +21,13 @@ Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il
 - Aller sur http://localhost:8080
 ## Voila a quoi ça ressemble par le moment 
 Mainpage :
-![Mainpage](mainpage.png)
+![Mainpage](images/mainpage.png)
 
 Categories :
-![Cats](cats.png)
+![Cats](images/cats.png)
 
 Plats :
-![Plats](plats.png)
+![Plats](images/plats.png)
 
 Panier :
-![Panier](panier.png)
+![Panier](images/panier.png)
