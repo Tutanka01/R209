@@ -13,7 +13,8 @@ include ("/var/www/html/static/mainapage.html");
 
 if (isset($_POST['plat'])) {
     $plat = $_POST['plat'];
+    !unlink();
     include ("/var/www/html/static/plat.html");
 }
-echo("Peut etre ça marche qui sait ??")
+
 ?>
