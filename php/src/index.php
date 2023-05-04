@@ -5,8 +5,14 @@ $db = new SQLite3('/var/www/html/sqlite.sqlite', SQLITE3_OPEN_READWRITE); // Il 
 // Get a count of the number of users
 $compo = $db->querySingle('SELECT * FROM composant');
 echo($compo);
-
 // Close the connection
 $db->close();
-include ("/var/www/html/static/panier.html");
+
+
+include ("/var/www/html/static/mainapage.html");
+
+if (isset($_POST['plat'])) {
+    $plat = $_POST['plat'];
+    include ("/var/www/html/static/plat.html");
+}
 ?>
