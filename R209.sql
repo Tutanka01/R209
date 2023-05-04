@@ -32,13 +32,14 @@ DROP TABLE IF EXISTS plat;
 CREATE TABLE plat
     (ID_plat     TEXT PRIMARY KEY,
      nom_plat    TEXT NOT NULL,
-     spécificité    TEXT NOT NULL,
-     auteur     TEXT NOT NULL);
+     spécificité    TEXT NULL,
+     auteur     TEXT NOT NULL,
+     Lien       TEXT NOT NULL);
 
-INSERT INTO plat VALUES('P1','Tajine','Halal','EAEB');
-INSERT INTO plat VALUES('P2','Gâteau au chocolat','Sans Gluten','JP');
-INSERT INTO plat VALUES('P3','Souflé','Français','Blbl');
-INSERT INTO plat VALUES('P4','Glace Citron','None','Test');
+INSERT INTO plat VALUES('P1','Tajine','Halal','EAEB','php\src\static\images\tajine.jpg');
+INSERT INTO plat VALUES('P2','Gâteau au chocolat','Sans Gluten','JP','php\src\static\images\gateau au chocolat.jpg');
+INSERT INTO plat VALUES('P4','Glace Citron','None','Test','php\src\static\images\glace au citron.jpg');
+INSERT INTO plat VALUES('P5','Couscous','Halal','EAEB','php\src\static\images\couscous.jpg');
 
 DROP TABLE IF EXISTS categorie;
 
