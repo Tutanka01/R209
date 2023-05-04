@@ -15,4 +15,5 @@ if (isset($_POST['plat'])) {
     $plat = $_POST['plat'];
     include ("/var/www/html/static/plat.html");
 }
+echo("Peut etre ça marche qui sait ??")
 ?>
