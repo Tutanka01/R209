@@ -18,12 +18,18 @@
     </div>
     <div class="container">
         <div class="plat">
-            <img src='/static/images/tajine.jpg' alt='Plat1'>
+            <?php
+            $db = new SQLite3('sqlite.sqlite');
+
+            $img = "SELECT DISTINCT Lien FROM plat WHERE ID_plat='P1'";
+            $results = $db->query($img);
+            while ($donnees=$results->fetchArray())
+                echo "img src='".$donnees[0]."' alt='Plat1'";
+            ?>
         </div>
         <div class="ingredients">
             <?php
-            $db = new SQLite3('sqlite.sqlite');
-        
+
             $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat='P1'";
             $results = $db->query($sql);
             while ($donnees=$results->fetchArray())

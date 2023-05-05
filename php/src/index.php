@@ -7,7 +7,7 @@ $db = new SQLite3('/var/www/html/sqlite.sqlite', SQLITE3_OPEN_READWRITE); // Il 
 // Close the connection
 $db->close();
 
-include ("/var/www/html/static/mainapage.html");
+include ("/var/www/html/static/plat.php");
 
 
 exit(); // arrête l'exécution du script après l'inclusion de la page "plat.html"
