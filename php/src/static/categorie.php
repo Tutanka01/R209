@@ -8,6 +8,11 @@
     <title>Article</title>
 </head>
 <body>
+    <?php
+
+    echo $_GET["type"];
+
+    ?>
     <div class="banner">
         <div class="titre">
             <h1>Mascaroni.fr</h1>
