@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-
+    // Commnent avoie les paramatres CGI d'une requette
     echo $_GET["type"];
 
     ?>
@@ -30,28 +30,40 @@
     </div>
     <div class="les_plats">
         <div class="plat">
-            <img src="/static/images/tajine.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat1" method="POST">
+                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
         <div class="plat">
-            <img src="/static/images/couscous.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat2" method="POST">
+                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
         <div class="plat">
-            <img src="/static/images/couscous.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat3" method="POST">
+                <button><img src="/static/images/couscous.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
         <div class="plat">
-            <img src="/static/images/couscous.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat4" method="POST">
+                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
         <div class="plat">
-            <img src="/static/images/couscous.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat5" method="POST">
+                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
         <div class="plat">
-            <img src="/static/images/couscous.jpg" alt="Plat1">
-            <p>lolozkekfo</p>
+            <form action="plat.php?type=Plat6" method="POST">
+                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
+                <p>lolozkekfo</p>
+            </form>
         </div>
     </div>
 </body>
