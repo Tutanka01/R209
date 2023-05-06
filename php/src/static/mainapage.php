@@ -12,12 +12,14 @@
             <h1>Mascaroni.fr</h1>
         </div>
         <div class="panier">
+            <form action="static/panier.php" method="POST">
             <button>Panier</button>
+            </form>
         </div>
     </div>
     <div class="container">
         <h1>Quel plat voulez vous ?</h1>
-        <form action="index.php" method="POST">
+        <form action="static/plat.php" method="POST">
           <input type="text" name="plat" placeholder="ex : 'Tajine' ">
           <input type="submit" value="Chercher">
         </form>

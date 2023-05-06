@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-
+    // Commnent avoie les paramatres CGI d'une requette
     echo $_GET["type"];
 
     ?>
