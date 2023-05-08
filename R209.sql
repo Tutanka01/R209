@@ -5,10 +5,11 @@ DROP TABLE IF EXISTS user;
 CREATE TABLE user
     (ID_user    TEXT PRIMARY KEY,
      nom_user   TEXT NOT NULL,
-     perm       TEXT NOT NULL
+     perm       TEXT NOT NULL,
+     passwd     TEXT NOT NULL
      );
 
-INSERT INTO user VALUES('U1','JP','Admin');
+INSERT INTO user VALUES('U1','JP','Admin','Momoju');
 
 DROP TABLE IF EXISTS saveur;
 

@@ -33,11 +33,11 @@
             <?php
             $db = new SQLite3('sqlite.sqlite');
         
-            $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat='P1'";
+            $sql = 'SELECT DISTINCT * FROM plat WHERE nom_plat="'.$plat.'"';
             $results = $db->query($sql);
             while ($donnees=$results->fetchArray())
                 {
-                echo '<h2>'.$donnees[1].'</h2>';
+                echo '<h2>'.$donnees[0].'</h2>';
                 }
             ?>
             <p>Ingredients :</p>
