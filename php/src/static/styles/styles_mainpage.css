@@ -38,6 +38,31 @@
     border-radius: 0 10px 10px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,.3);
 }
+.connexion {
+  text-align: right;
+}
+
+.boutons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.panier {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.banner .connexion button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
 .container {
     align-items: center;
     border: 2px solid #5d5dff;

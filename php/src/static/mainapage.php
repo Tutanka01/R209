@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="/static/styles/styles_mainpage.css">
     <title>Mainpage</title>
 </head>
-<body>
+<body>  
     <div class="banner">
         <div class="titre">
             <h1>Mascaroni.fr</h1>
         </div>
+        <div class="boutons">
+            <div class="connexion">
+                <form action="static/connexion.php" method="POST">
+                    <button class="connexion-button">Connexion</button>
+                </form>
+            </div>
+        </div>    
         <div class="panier">
             <form action="static/panier.php" method="POST">
-            <button>Panier</button>
+                <button>Panier</button>
             </form>
         </div>
     </div>
