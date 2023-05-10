@@ -28,39 +28,10 @@
           <input type="submit" value="Chercher">
         </form>
     </div>
+    ?php
     <div class="les_plats">
         <div class="plat">
             <form action="plat.php?type=Plat1" method="POST">
-                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
-                <p>lolozkekfo</p>
-            </form>
-        </div>
-        <div class="plat">
-            <form action="plat.php?type=Plat2" method="POST">
-                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
-                <p>lolozkekfo</p>
-            </form>
-        </div>
-        <div class="plat">
-            <form action="plat.php?type=Plat3" method="POST">
-                <button><img src="/static/images/couscous.jpg" alt="Plat1"></button>
-                <p>lolozkekfo</p>
-            </form>
-        </div>
-        <div class="plat">
-            <form action="plat.php?type=Plat4" method="POST">
-                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
-                <p>lolozkekfo</p>
-            </form>
-        </div>
-        <div class="plat">
-            <form action="plat.php?type=Plat5" method="POST">
-                <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
-                <p>lolozkekfo</p>
-            </form>
-        </div>
-        <div class="plat">
-            <form action="plat.php?type=Plat6" method="POST">
                 <button><img src="/static/images/tajine.jpg" alt="Plat1"></button>
                 <p>lolozkekfo</p>
             </form>
