@@ -9,14 +9,6 @@
 </head>
 <body>
     <!--code pour recuperer le plat envoye par le formulaire de la page mainpage.php -->
-    <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Récupère la valeur de l'input avec name="plat"
-            $plat = $_POST['plat'];
-            // Utilise la valeur comme bon te semble, par exemple :
-            echo 'Le plat recherché est : ' . $plat;
-        }
-    ?>
     <div class="banner">
         <div class="titre">
             <h1>Mascaroni.fr</h1>

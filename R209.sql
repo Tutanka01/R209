@@ -37,10 +37,11 @@ CREATE TABLE plat
      auteur     TEXT NOT NULL,
      Lien       TEXT NOT NULL);
 
-INSERT INTO plat VALUES('P1','Tajine','Halal','EAEB','php\src\static\images\tajine.jpg');
-INSERT INTO plat VALUES('P2','Gâteau au chocolat','Sans Gluten','JP','php\src\static\images\gateau au chocolat.jpg');
-INSERT INTO plat VALUES('P4','Glace Citron','None','Test','php\src\static\images\glace au citron.jpg');
-INSERT INTO plat VALUES('P5','Couscous','Halal','EAEB','php\src\static\images\couscous.jpg');
+INSERT INTO plat VALUES('P1','Tajine','Halal','EAEB','images\tajine.jpg');
+INSERT INTO plat VALUES('P2','Gateau au chocolat','Sans Gluten','JP','images\gateau_au_chocolat.jpg');
+INSERT INTO plat VALUES('P4','Glace Citron','None','Test','images\glace_au_citron.jpg');
+INSERT INTO plat VALUES('P5','Couscous','Halal','EAEB','images\couscous.jpg');
+INSERT INTO plat VALUES('P6','Tajinette','Halal','EAEB','images\tajine.jpg');
 
 DROP TABLE IF EXISTS categorie;
 
