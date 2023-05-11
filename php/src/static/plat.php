@@ -33,18 +33,36 @@
             ?>
         </div>
         <div class="ingredients">
+            <p>Description :</p>
+            <?
+                $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
+                $results = $db->query($sql);
+                while ($row = $results->fetchArray()) {
+                    echo "<p>".$row['description']."</p>";
+                }
+            ?>
             <p>Ingredients :</p>
             <?
                 $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
                 $results = $db->query($sql);
                 while ($row = $results->fetchArray()) {
-                    echo "<p>".$row['ingredients']."</p>";
+                    echo "<p>".$row['ingredient']."</p>";
                 }
             ?>
-            <p>Mais, legumes, viande</p>
         </div>
         <div class="cats">
             <p>Categories :</p>
+            <?
+                $sql = "SELECT plat.*, categorie.* 
+                    FROM plat 
+                    JOIN categorie ON plat.ID_plat = categorie.ID_plat 
+                    WHERE plat.ID_plat = '$id_plat'";
+                var_dump($sql);
+                $results = $db->query($sql);
+                while ($row = $results->fetchArray()) {
+                    echo "<p>".$row['nom_categorie']."</p>";
+                }
+            ?>
         </div>
         <div class="actions">
             <button>Retirer du panier</button>
