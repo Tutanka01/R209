@@ -38,37 +38,37 @@
                 <ul class="ulo">
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=chaud" method="POST">
-                            <input type="hidden" name="Caud" value="Caud">
+                            <input type="hidden" name="plat" value="Caud">
                             <button type="submit">Chaud</button>
                         </form>
                     </li> 
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=Froid" method="POST">
-                            <input type="hidden" name="Froid">
+                            <input type="hidden" name="plat" value="Froid">
                             <button type="submit">Froid</button>
                         </form>
                     </li>
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=Entree" method="POST">
-                            <input type="hidden" name="Entree">
+                            <input type="hidden" name="plat" value="Entree">
                             <button type="submit">Entree</button>
                         </form>
                     </li>
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=Plat" method="POST">
-                            <input type="hidden" name="Plat">
+                            <input type="hidden" name="plat" value="Plat">
                             <button type="submit">Plat</button>
                         </form>
                     </li>
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=Dessert" method="POST">
-                            <input type="hidden" name="Dessert">
+                            <input type="hidden" name="plat" value="Dessert">
                             <button type="submit">Dessert</button>
                         </form>
                     </li>
                     <li class="lsite-item">
                         <form action="static/recherche_plat.php?type=Accompagnement" method="POST">
-                            <input type="hidden" name="attribut" value="Accompagnement">
+                            <input type="hidden" name="plat" value="Accompagnement">
                             <button type="submit">Accompagnement</button>
                         </form>
                     </li>
