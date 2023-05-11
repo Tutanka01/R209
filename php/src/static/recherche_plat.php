@@ -28,14 +28,14 @@
             // if $plat is not in $categories
             if (!in_array($plat, $categories)) {
                 echo "<h1>Les plats qui correspondent a : '$plat' </h1>";
-                echo "<form action='http://localhost:5000/login' method='POST'>";
+                echo "<form action='recherche_plat.php' method='POST'>";
                     echo "<input type='text' name='plat' placeholder='ex : 'Tajine' >";
                     echo "<input type='submit' value='Chercher'>";
                 echo "</form>";
             }
             else {
                 echo "<h1>Les plats de la categorie : '$plat' </h1>";
-                echo "<form action='http://localhost:5000/login' method='POST'>";
+                echo "<form action='recherche_plat.php' method='POST'>";
                     echo "<input type='text' name='plat' placeholder='ex : 'Tajine' >";
                     echo "<input type='submit' value='Chercher'>";
                 echo "</form>";
@@ -47,17 +47,34 @@
     <div class="les_plats">
     <?php
         $db = new SQLite3('sqlite.sqlite');
-        $sql = 'SELECT DISTINCT * FROM plat WHERE nom_plat LIKE "'.$plat.'%"';
-        $results = $db->query($sql);
-        while ($donnees=$results->fetchArray())
-            {
+        if (!in_array($plat, $categories)) {
+            $sql = 'SELECT DISTINCT * FROM plat WHERE nom_plat LIKE "'.$plat.'%"';
+            $results = $db->query($sql);
+            while ($donnees=$results->fetchArray())
+                {
                 echo "<div class='plat'>";
-                echo "<form action='plat.php?type=Plat1' method='POST'>";
-                    echo "<button><img src=".$donnees['Lien']." alt='Plat1'></button>";
-                    echo "<p>".$donnees['nom_plat']."</p>";
-                echo "</form>";
-            echo "</div>";
+                    echo "<form action='plat.php' method='POST'>";
+                        echo "<button type='submit' name='submit'><img src=".$donnees['Lien']." alt='".$donnees['ID_plat']."'></button>";
+                        echo "<input type='hidden' name='id_plat' value='".$donnees['ID_plat']."'>";
+                        echo "<p>".$donnees['nom_plat']."</p>";
+                    echo "</form>";
+                echo "</div>";
+                }
             }
+            else {
+            $sql = "SELECT * FROM plat JOIN categorie ON plat.ID_plat = categorie.ID_plat WHERE categorie.$plat = 1";
+            $results = $db->query($sql);
+            while ($donnees=$results->fetchArray())
+                {
+                echo "<div class='plat'>";
+                    echo "<form action='plat.php' method='POST'>";
+                        echo "<button type='submit' name='submit'><img src=".$donnees['Lien']." alt='".$donnees['ID_plat']."'></button>";
+                        echo "<input type='hidden' name='id_plat' value='".$donnees['ID_plat']."'>";
+                        echo "<p>".$donnees['nom_plat']."</p>";
+                    echo "</form>";
+                echo "</div>";
+                }
+        }
     ?>
     </div>
 </body>
