@@ -3,7 +3,7 @@ R209 - Web
 
 ## https://www.recettesdici.com/fr/categorie-de-plat/
 
-[] rechercher une catégorie
+[x] rechercher une catégorie
 [] page plat
 [] panier link avec un user
 [] authentification

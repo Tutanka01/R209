@@ -18,53 +18,40 @@
         </div>
     </div>
     <div class="container">
-        <div class="plat">
-            <img src='/static/images/tajine.jpg' alt='Plat1'>
-        </div>
-        <div class="ingredients">
-            <?php
+        <?php
             $db = new SQLite3('sqlite.sqlite');
-        
-            $sql = 'SELECT DISTINCT * FROM plat WHERE nom_plat="'.$plat.'"';
-            $results = $db->query($sql);
-            while ($donnees=$results->fetchArray())
-                {
-                echo '<h2>'.$donnees[0].'</h2>';
+            // recuperation des donnes du formulaire
+            $id_plat = $_POST['id_plat'];
+            ?>
+        <div class="plat">
+            <?
+                $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
+                $results = $db->query($sql);
+                while ($row = $results->fetchArray()) {
+                    echo "<img src='".$row['Lien']."' alt='".$row['nom_plat']."'>";
                 }
             ?>
+        </div>
+        <div class="ingredients">
             <p>Ingredients :</p>
+            <?
+                $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
+                $results = $db->query($sql);
+                while ($row = $results->fetchArray()) {
+                    echo "<p>".$row['ingredients']."</p>";
+                }
+            ?>
             <p>Mais, legumes, viande</p>
         </div>
         <div class="cats">
             <p>Categories :</p>
-            <?php
-            $req2 = "SELECT DISTINCT * FROM categorie WHERE ID_plat = 'P1'";
-            $results2 = $db->query($req2);
-            while ($donnes=$results2->fetchArray())
-                {
-                    if ($donnes[1]==1)
-                        echo 'chaud, ';
-                    if ($donnes[2]==1)
-                        echo 'froid, ';
-                    if ($donnes[3]==1)
-                        echo 'entrée, ';
-                    if ($donnes[4]==1)
-                        echo 'plat, ';
-                    if ($donnes[5]==1)
-                        echo 'dessert, '; 
-                    echo 'recette "fait maison".';
-                }
-
-                
-            $db->close();
-            ?>
         </div>
         <div class="actions">
             <button>Retirer du panier</button>
             <button>Ajouter au panier</button>
         </div>
         <div class="descriptif">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum inventore suscipit numquam quia expedita nesciunt distinctio, consequuntur, dolore sed earum, facere sunt natus nemo aut et? Quas a quam eaque?</p>
+            <p></p>
         </div>
         <div class="prix">
             <p>15€</p>
