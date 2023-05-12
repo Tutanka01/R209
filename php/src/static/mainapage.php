@@ -4,6 +4,15 @@
         echo $_SESSION['user'];
     } else {
     }
+    if (isset($_SESSION['is_add'])) {
+        $is_add = $_SESSION['is_add'];
+        echo "<script>alert('Plat ajoute');</script>";
+        unset($_SESSION['is_add']); 
+    } elseif (isset($_SESSION['is_remove'])) {
+        $is_add = $_SESSION['is_remove'];
+        echo "<script>alert('Plat enleve');</script>";
+        unset($_SESSION['is_remove']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
