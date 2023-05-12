@@ -40,13 +40,13 @@ CREATE TABLE categorie
      froid   INTEGER NULL,
      entree  INTEGER NULL,
      plat  INTEGER NULL,
-     dessert   INTEGER NULL,
-     accompagnement  INTEGER NULL  );
+     dessert   INTEGER NULL );
 
-INSERT INTO categorie VALUES('P1',1,0,0,1,0,0);
-INSERT INTO categorie VALUES('P2',0,0,0,0,1,0);
-INSERT INTO categorie VALUES('P3',1,0,1,0,0,0);
-INSERT INTO categorie VALUES('P4',0,1,0,0,1,0);
+INSERT INTO categorie VALUES('P1',1,0,0,1,0);
+INSERT INTO categorie VALUES('P2',0,0,0,0,1);
+INSERT INTO categorie VALUES('P3',0,1,0,0,1);
+INSERT INTO categorie VALUES('P4',1,0,0,1,0);
+INSERT INTO categorie VALUES('P5',1,0,0,1,0);
 
 DROP TABLE IF EXISTS panier;
 
@@ -54,8 +54,5 @@ CREATE TABLE panier
     (ID_user    TEXT NOT NULL,
      ID_plat    TEXT NOT NULL,
      QTE        INTEGER NOT NULL);
-
-INSERT INTO panier VALUES('U1','P1',12);
-INSERT INTO panier VALUES('U1','P2',1);
 
 COMMIT;
