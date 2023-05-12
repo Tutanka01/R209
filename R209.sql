@@ -4,29 +4,15 @@ DROP TABLE IF EXISTS user;
 
 CREATE TABLE user
     (ID_user    TEXT PRIMARY KEY,
-     nom_user   TEXT NOT NULL,
-     perm       TEXT NOT NULL,
-     passwd     TEXT NOT NULL
+     login   TEXT NOT NULL,
+     passwd     TEXT NOT NULL,
+     perm       TEXT NOT NULL
      );
 
-INSERT INTO user VALUES('U1','JP','Admin','Momoju');
-
-DROP TABLE IF EXISTS saveur;
-
-CREATE TABLE saveur
-    (ID_plat     TEXT PRIMARY KEY,
-     sale   INTEGER NULL,
-     sucre  INTEGER NULL,
-     acide  INTEGER NULL,
-     amer   INTEGER NULL,
-     umami  INTEGER NULL
-     );
-
-INSERT INTO saveur VALUES('P1',1,0,0,0,0);
-INSERT INTO saveur VALUES('P2',0,1,0,0,0);
-INSERT INTO saveur VALUES('P3',1,0,0,0,0);
-INSERT INTO saveur VALUES('P4',0,1,1,0,0);
-
+INSERT INTO user VALUES('U1','Julien','1234','admin');
+INSERT INTO user VALUES('U2','Mohamad','123','guest');
+INSERT INTO user VALUES('U3','Jean','123','guest');
+INSERT INTO user VALUES('U4','Pierre','123','guest');
 
 DROP TABLE IF EXISTS plat;
 

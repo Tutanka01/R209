@@ -1,10 +1,16 @@
-<? session_start();?>
+<?
+    session_start();
+    if (isset($_SESSION['user'])){
+        echo $_SESSION['user'];
+    } else {
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles/styles_mainpage.css">
+    <link rel="stylesheet" href="/styles/styles_mainpage.css">
     <title>Mainpage</title>
 </head>
 <body>  
@@ -14,20 +20,20 @@
         </div>
         <div class="boutons">
             <div class="connexion">
-                <form action="static/connexion.php" method="POST">
+                <form action="connexion.php" method="POST">
                     <button class="connexion-button">Connexion</button>
                 </form>
             </div>
         </div>    
         <div class="panier">
-            <form action="static/panier.php" method="POST">
+            <form action="panier.php" method="POST">
                 <button>Panier</button>
             </form>
         </div>
     </div>
     <div class="container">
         <h1>Quel plat voulez vous ?</h1>
-        <form action="static/recherche_plat.php" method="POST">
+        <form action="srecherche_plat.php" method="POST">
           <input type="text" name="plat" placeholder="ex : 'Tajine' ">
           <input type="submit" value="Chercher">
         </form>
@@ -37,37 +43,37 @@
             <div class="container_lsite">
                 <ul class="ulo">
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=chaud" method="POST">
+                        <form action="recherche_plat.php?type=chaud" method="POST">
                             <input type="hidden" name="plat" value="Caud">
                             <button type="submit">Chaud</button>
                         </form>
                     </li> 
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=Froid" method="POST">
+                        <form action="recherche_plat.php?type=Froid" method="POST">
                             <input type="hidden" name="plat" value="Froid">
                             <button type="submit">Froid</button>
                         </form>
                     </li>
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=Entree" method="POST">
+                        <form action="recherche_plat.php?type=Entree" method="POST">
                             <input type="hidden" name="plat" value="Entree">
                             <button type="submit">Entree</button>
                         </form>
                     </li>
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=Plat" method="POST">
+                        <form action="recherche_plat.php?type=Plat" method="POST">
                             <input type="hidden" name="plat" value="Plat">
                             <button type="submit">Plat</button>
                         </form>
                     </li>
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=Dessert" method="POST">
+                        <form action="recherche_plat.php?type=Dessert" method="POST">
                             <input type="hidden" name="plat" value="Dessert">
                             <button type="submit">Dessert</button>
                         </form>
                     </li>
                     <li class="lsite-item">
-                        <form action="static/recherche_plat.php?type=Accompagnement" method="POST">
+                        <form action="recherche_plat.php?type=Accompagnement" method="POST">
                             <input type="hidden" name="plat" value="Accompagnement">
                             <button type="submit">Accompagnement</button>
                         </form>
