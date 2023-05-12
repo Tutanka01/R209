@@ -7,6 +7,7 @@ $db = new SQLite3('/var/www/html/static/sqlite.sqlite', SQLITE3_OPEN_READWRITE);
 // Close the connection
 $db->close();
 
+
 include ("/var/www/html/static/mainapage.php");
 
 
