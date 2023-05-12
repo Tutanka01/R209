@@ -1,3 +1,5 @@
+<?session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -78,8 +80,12 @@
             ?>
         </div>
         <div class="actions">
-            <button>Retirer du panier</button>
-            <button>Ajouter au panier</button>
+            <form action="script_ajout_retirer_panier.php?action=retirer&id_plat=<?=$id_plat?>" method="post">
+                <button >Retirer du panier</button>
+            </form>
+            <form action="script_ajout_retirer_panier.php?action=ajouter&id_plat=<?=$id_plat?>" method="post">
+                <button>Ajouter au panier</button>
+            </form>
         </div>
         <div class="descriptif">
             <p></p>
