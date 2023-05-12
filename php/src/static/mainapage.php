@@ -33,7 +33,7 @@
     </div>
     <div class="container">
         <h1>Quel plat voulez vous ?</h1>
-        <form action="srecherche_plat.php" method="POST">
+        <form action="recherche_plat.php" method="POST">
           <input type="text" name="plat" placeholder="ex : 'Tajine' ">
           <input type="submit" value="Chercher">
         </form>

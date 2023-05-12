@@ -36,9 +36,6 @@
         <form action="script_connexion.php" method="POST">
           <input type="text" name="user" placeholder="Login">
           <input type="text" name="mdp" placeholder="Mot de passe" type="password">
-          <?
-
-          ?>
           <input type="submit" value="login">
         </form>
     </div>
