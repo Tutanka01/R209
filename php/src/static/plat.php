@@ -61,7 +61,6 @@
             <h4>Categories :</h4>
             <?
                 $sql = "SELECT DISTINCT * FROM categorie WHERE ID_plat = '".$id_plat."'";
-                var_dump($sql);
                 $results = $db->query($sql);
                 while ($row=$results->fetchArray())
                     {
