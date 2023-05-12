@@ -2,7 +2,7 @@
     session_start();
     if (isset($_SESSION['user'])){
         $error = "Vous êtes déjà connecté";
-        header('Location: mainapage.php?error=$error');
+        echo $error;
     } else {
         if (isset($_GET['error'])){
             $error = $_GET['error'];
@@ -35,7 +35,7 @@
         <h1>Connexion</h1>
         <form action="script_connexion.php" method="POST">
           <input type="text" name="user" placeholder="Login">
-          <input type="text" name="mdp" placeholder="Mot de passe">
+          <input type="text" name="mdp" placeholder="Mot de passe" type="password">
           <?
 
           ?>
