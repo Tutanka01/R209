@@ -7,9 +7,9 @@ R209 - Web
 
 [] page plat (julien, quasi fini) : ajouter une qte à ajouter au panier.
 
-[] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
+[x] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
 
-[] panier link avec un user (mohamad)
+[x] panier link avec un user (mohamad)
 
 [] Admin page (julien)
 

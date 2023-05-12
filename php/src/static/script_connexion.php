@@ -17,6 +17,9 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
         while ($row = $results->fetchArray()) {
             $_SESSION['id_user'] = $row['ID_user'];
         }
+        if ($user == 'admin'){
+            header("Location: admin.php");
+        }
         header("Location: mainapage.php");
         exit();
     } else {
