@@ -3,6 +3,11 @@ R209 - Web
 
 ## https://www.recettesdici.com/fr/categorie-de-plat/
 
+[x] rechercher une catégorie
+[] page plat
+[] Session (php), $_SESSION
+[] panier link avec un user
+[] authentification
 ## Pour acceder au serveur de developpement
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour l'installation de ces deux trucs.
 - Cloner le repo
