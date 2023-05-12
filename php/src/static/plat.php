@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles/styles_plats.css">
+    <link rel="stylesheet" href="styles/styles_plats.css">
     <title>Plat</title>
 </head>
 <body>
@@ -18,11 +18,11 @@
         </div>
     </div>
     <div class="container">
-        <?php
+        <?
             $db = new SQLite3('sqlite.sqlite');
-            // recuperation des donnees du formulaire
+            // recuperation des donnes du formulaire
             $id_plat = $_POST['id_plat'];
-            ?>
+        ?>
         <div class="plat">
             <?
                 $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
@@ -33,14 +33,7 @@
             ?>
         </div>
         <div class="ingredients">
-            <?
-                $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
-                $results = $db->query($sql);
-                while ($row = $results->fetchArray()) {
-                    echo "<h1>".$row['nom_plat']."</h1>";
-                }
-            ?>
-            <h4>Description :</h4>
+            <p>Description :</p>
             <?
                 $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
                 $results = $db->query($sql);
@@ -48,7 +41,7 @@
                     echo "<p>".$row['description']."</p>";
                 }
             ?>
-            <h4>Ingredients :</h4>
+            <p>Ingredients :</p>
             <?
                 $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
                 $results = $db->query($sql);
@@ -58,23 +51,17 @@
             ?>
         </div>
         <div class="cats">
-            <h4>Categories :</h4>
+            <p>Categories :</p>
             <?
-                $sql = "SELECT DISTINCT * FROM categorie WHERE ID_plat = '".$id_plat."'";
+                $sql = "SELECT plat.*, categorie.* 
+                    FROM plat 
+                    JOIN categorie ON plat.ID_plat = categorie.ID_plat 
+                    WHERE plat.ID_plat = '$id_plat'";
+                var_dump($sql);
                 $results = $db->query($sql);
-                while ($row=$results->fetchArray())
-                    {
-                    if ($row[1]==1)
-                        echo '<li>chaud</li>';
-                    if ($row[2]==1)
-                        echo '<li>froid</li>';
-                    if ($row[3]==1)
-                        echo '<li>entrée</li>';
-                    if ($row[4]==1)
-                        echo '<li>plat</li>';
-                    if ($row[5]==1)
-                        echo '<li>dessert</li>'; 
-                    }
+                while ($row = $results->fetchArray()) {
+                    echo "<p>".$row['nom_categorie']."</p>";
+                }
             ?>
         </div>
         <div class="actions">
@@ -85,13 +72,8 @@
             <p></p>
         </div>
         <div class="prix">
-            <?
-            $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
-            $results = $db->query($sql);
-            while ($row=$results->fetchArray()) {
-                echo "<h5 style='color:red'>Prix de l'article : ".$row['prix']."€ </h5>";
-            }
-            ?>
+            <p>15€</p>
+        <p>Premier test php n°<?php echo date("H:i:s") ; ?></p>
         </div>
     </div>
 </body>
