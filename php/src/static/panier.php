@@ -1,3 +1,8 @@
+<?session_start();
+$user = $_SESSION['user'];
+$id_user = $_SESSION['id_user'];
+echo $id_user;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,9 +28,17 @@
         </div>
         <div class="liste_produits">
             <ul>
-                <li>Plat 1</li>
-                <li>Plat 2</li>
-                <li>Plat 3</li>
+                <? 
+                    $db = new SQLite3('sqlite.sqlite');
+                    $sql = "SELECT *
+                            FROM plat
+                            JOIN panier ON plat.ID_plat = panier.ID_plat
+                            WHERE panier.ID_user = '".$id_user."'"; 
+                    $results = $db->query($sql);
+                    while ($row = $results->fetchArray()) {
+                        echo "<li>".$row['nom_plat']."</li>";
+                    }
+                ?>
             </ul>
         </div>
         <div class="total">

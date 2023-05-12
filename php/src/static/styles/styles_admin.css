@@ -1,0 +1,74 @@
+/* Couleurs */
+:root {
+    --primary-color: #f33514;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+}
+
+/* Styles */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+.titre {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+
+.panier {
+    text-align: right;
+}
+
+.panier button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+.connexion {
+  text-align: right;
+}
+
+.boutons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.panier {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.banner .connexion button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+.button {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }

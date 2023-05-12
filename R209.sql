@@ -55,4 +55,7 @@ CREATE TABLE panier
      ID_plat    TEXT NOT NULL,
      QTE        INTEGER NOT NULL);
 
+INSERT INTO panier VALUES('U1','P1',12);
+INSERT INTO panier VALUES('U1','P2',1);
+
 COMMIT;

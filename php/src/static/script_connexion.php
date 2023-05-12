@@ -12,6 +12,11 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
     if ($results->fetchArray()) {
         $_SESSION['user'] = $user;
         $_SESSION['mdp'] = $mdp;
+        $sql = "SELECT ID_user FROM user WHERE login = '$user'";
+        $results = $db->query($sql);
+        while ($row = $results->fetchArray()) {
+            $_SESSION['id_user'] = $row['ID_user'];
+        }
         header("Location: mainapage.php");
         exit();
     } else {
@@ -19,4 +24,7 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
         header("Location: connexion.php?error=$error");
     }
 }
+
+
+
 ?>
