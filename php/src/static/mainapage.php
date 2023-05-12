@@ -1,3 +1,4 @@
+<? session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,8 +33,7 @@
         </form>
     </div>
     <div>
-        <div class="lsite">
-            
+        <div class="lsite"> 
             <div class="container_lsite">
                 <ul class="ulo">
                     <li class="lsite-item">

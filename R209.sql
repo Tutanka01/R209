@@ -58,7 +58,7 @@ CREATE TABLE categorie
 
 INSERT INTO categorie VALUES('P1',1,0,0,1,0,0);
 INSERT INTO categorie VALUES('P2',0,0,0,0,1,0);
-INSERT INTO categorie VALUES('P3',1,0,1,0,0,0);
+INSERT INTO categorie VALUES('P5',1,0,1,0,0,0);
 INSERT INTO categorie VALUES('P4',0,1,0,0,1,0);
 
 DROP TABLE IF EXISTS panier;

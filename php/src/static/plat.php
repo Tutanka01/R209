@@ -18,11 +18,11 @@
         </div>
     </div>
     <div class="container">
-        <?php
+        <?
             $db = new SQLite3('sqlite.sqlite');
             // recuperation des donnes du formulaire
             $id_plat = $_POST['id_plat'];
-            ?>
+        ?>
         <div class="plat">
             <?
                 $sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
