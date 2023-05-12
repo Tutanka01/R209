@@ -5,9 +5,9 @@ R209 - Web
 
 [x] rechercher une catégorie
 [] page plat
-[] Session (php), $_SESSION
+[] Session (php), $_SESSION, pour track et mettre le panier sans avoir besoin de login/mdp
 [] panier link avec un user
-[] authentification
+[] authentification avec mdp et login
 ## Pour acceder au serveur de developpement
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour l'installation de ces deux trucs.
 - Cloner le repo
