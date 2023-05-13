@@ -4,10 +4,13 @@
         echo $_SESSION['user'];
     } else {
     }
+    // Si on ajoute un plat au panier on affiche cd message
+    // La variabl is_add est utilisee/declaree dans le fichier panier.php
     if (isset($_SESSION['is_add'])) {
         $is_add = $_SESSION['is_add'];
         echo "<script>alert('Plat ajoute');</script>";
         unset($_SESSION['is_add']); 
+    // Si on enleve un plat au panier on affiche ce message
     } elseif (isset($_SESSION['is_remove'])) {
         $is_add = $_SESSION['is_remove'];
         echo "<script>alert('Plat enleve');</script>";

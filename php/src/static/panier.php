@@ -36,7 +36,7 @@ echo $id_user;
                             WHERE panier.ID_user = '".$id_user."'"; 
                     $results = $db->query($sql);
                     while ($row = $results->fetchArray()) {
-                        echo "<li>".$row['nom_plat']."</li>";
+                        echo "<li>".$row['nom_plat']."<p> Prix unite :".$row['prix']." €</p><p>Quantite :".$row['QTE']."</p></li>";
                     }
                 ?>
             </ul>
