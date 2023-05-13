@@ -1,9 +1,5 @@
 <?
     session_start();
-    if (isset($_SESSION['user'])){
-        echo $_SESSION['user'];
-    } else {
-    }
     // Si on ajoute un plat au panier on affiche cd message
     // La variabl is_add est utilisee/declaree dans le fichier panier.php
     if (isset($_SESSION['is_add'])) {
@@ -32,9 +28,20 @@
         </div>
         <div class="boutons">
             <div class="connexion">
-                <form action="connexion.php" method="POST">
-                    <button class="connexion-button">Connexion</button>
-                </form>
+            <?
+                    if (isset($_SESSION['user'])) {
+                        echo "<button class='connexion-button'>Bonjour ".$_SESSION['user']."</button>";
+                        echo "<div class='decobutton'>";
+                            echo "<form action='deconnexion.php' method='POST'>";
+                            echo "<button class='deconnexion-button'>Déconnexion</button>";
+                            echo "</form>";
+                        echo "</div>";
+                    } else {
+                        echo "<form action='connexion.php' method='POST'>";
+                            echo "<button class='connexion-button'>Connexion</button>";
+                        echo "</form>";
+                    }                    
+                ?>
             </div>
         </div>    
         <div class="panier">
