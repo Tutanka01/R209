@@ -17,11 +17,13 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
         while ($row = $results->fetchArray()) {
             $_SESSION['id_user'] = $row['ID_user'];
         }
-        if ($user == 'admin'){
+        if ($_SESSION['user'] == 'admin'){
             header("Location: admin.php");
+            exit();
+        } else {
+            header("Location: mainapage.php");
+            exit();
         }
-        header("Location: mainapage.php");
-        exit();
     } else {
         $error = "Identifiant ou mot de passe invalide";
         header("Location: connexion.php?error=$error");

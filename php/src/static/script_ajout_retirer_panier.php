@@ -55,7 +55,7 @@ if ($action == "ajouter") {
     }
 }
 
-// Redirection vers la page précédente
+// Redirection vers la page mainapage.php
 header("Location: mainapage.php");
 exit;
 ?>
