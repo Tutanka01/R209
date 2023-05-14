@@ -49,7 +49,11 @@ if ($action == "ajouter") {
     }
 }
 
-// Redirection vers la page mainapage.php
-header("Location: mainapage.php");
+// Redirection vers la page mainapage.php si il vient pas du panier sinon vers la page panier.php
+if (isset($_GET['from_panier']) && $_GET['from_panier'] == 1) {
+    header("Location: panier.php");
+} else {
+    header("Location: mainapage.php");
+}
 exit;
 ?>
