@@ -5,7 +5,11 @@ R209 - Web
 
 - [x] rechercher une catégorie
 
+<<<<<<< HEAD
+[x] page plat (julien, quasi fini) : ajouter une qte à ajouter au panier.
+=======
 - [x] page plat (mohamad, quasi fini) : ajouter une qte à ajouter au panier.
+>>>>>>> 3cd9c3fb1056627cb73af6eb6b49218901506e63
 
 - [x] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
 
