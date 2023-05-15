@@ -20,28 +20,15 @@
             </div>
         </div>    
 </div>
+
 <?
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $donnee = $_POST['type'];
+    $donnee = $_POST['new'];
 }
-echo '<form action="admin_new.php" method="POST">';
-echo '<input type="hidden" name="new" value="'.$donnee.'">';
 ?>
-    <button type="submit">Ajouter un nouveau</button>
-</form>
-<?
-    $db = new SQLite3('sqlite.sqlite');
-    $sql= 'SELECT DISTINCT * FROM '.$donnee; 
-    $results = $db->query($sql);
-    while ($row=$results->fetchArray()) {
-        echo '<div class="button">';
-        echo $row[0];
-        foreach (range(1, (count($row)/2)-1) as $elt) {
-            echo ' | ';
-            echo $row[$elt];
-        }
-        echo '</div>';
-    }
-?>
+
+
+
+
 </body>
 </html>
