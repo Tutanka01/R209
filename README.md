@@ -21,7 +21,7 @@ R209 - Web
 
 - [] Avis des utilisateurs (mohamad)
 
-- [] Plus de plats (Mohamad)//FIN
+- [x] Plus de plats (Mohamad)//FIN
 ## Pour acceder au serveur de developpement
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour l'installation de ces deux trucs.
 - Cloner le repo

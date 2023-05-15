@@ -1,5 +1,12 @@
 <?php
 session_start();
+if (isset($_SESSION['user'])){
+    $error = "Vous êtes déjà connecté";
+    echo $error;
+} else {
+    header("Location: connexion.php");
+}
+
 $user = $_SESSION['user'];
 $id_user = $_SESSION['id_user'];
 $db = new SQLite3('sqlite.sqlite');

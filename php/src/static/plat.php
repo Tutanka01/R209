@@ -95,6 +95,9 @@
                 echo "<h5 style='color:red'>Prix de l'article : ".$row['prix']."€ </h5>";
             }
         ?>
+        <div class="container">
+            <p>Avis :</p>
+        </div>
         </div>
     </div>
 </body>
