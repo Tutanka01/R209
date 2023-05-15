@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS categorie;
 
 CREATE TABLE categorie
     (ID_plat     TEXT PRIMARY KEY,
-     caud   INTEGER NULL,
+     chaud   INTEGER NULL,
      froid   INTEGER NULL,
      entree  INTEGER NULL,
      plat  INTEGER NULL,

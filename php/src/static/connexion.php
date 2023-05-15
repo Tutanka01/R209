@@ -44,5 +44,13 @@
           <input type="submit" value="login">
         </form>
     </div>
+    <div class="container_enregistrer">
+        <h1>S'enregistrer</h1>
+        <form action="script_connexion.php" method="POST">
+          <input type="text" name="user" placeholder="Login">
+          <input type="password" name="mdp" placeholder="Mot de passe">
+          <input type="submit" value="login">
+        </form>
+    </div>
 </body>
 </html>
