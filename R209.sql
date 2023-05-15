@@ -45,6 +45,18 @@ INSERT INTO plat VALUES('P16','Crème Brûlée','Sans Gluten',12,'Test','images\
 INSERT INTO plat VALUES('P17','Tarte aux fraises','None',20,'Test','images\tarte_fraise.jpg','La tarte aux fraises est un dessert frais et fruité, parfait pour les journées chaudes dété. Elle est généralement préparée avec une croûte à tarte croustillante, de la crème pâtissière et des fraises fraîches. Sa texture est légère et fondante, avec un goût sucré et acidulé.','Ingrédients pour une tarte aux fraises : pâte à tarte, crème pâtissière, fraises, sucre glace.');
 INSERT INTO plat VALUES('P18','Cheesecake','None',18,'Test','images\cheesecake.jpg','Le cheesecake est un dessert crémeux et décadent, souvent réalisé avec un mélange de fromage frais, de sucre et doeufs, sur une base de biscuits émiettés. Il peut être agrémenté de fruits, de coulis ou de sauce au chocolat pour une touche de saveur supplémentaire.','Ingrédients pour un cheesecake : biscuits graham, fromage frais, sucre, oeufs, crème fraîche, vanille.');
 INSERT INTO plat VALUES('P19','Panna Cotta','Sans Gluten',10,'Test','images\pannacotta.jpg','La panna cotta est un dessert italien léger et crémeux, souvent réalisé avec de la crème, du sucre et de la gélatine. Elle peut être aromatisée avec de la vanille, du café ou de la liqueur damande pour une touche de saveur supplémentaire. Elle est servie froide, avec un coulis de fruits rouge ou de caramel.','Ingrédients pour une panna cotta : crème, sucre, gélatine, vanille, fruits rouges ou caramel pour la garniture.');
+INSERT INTO plat VALUES('P20','Salade Caprese','Végétarien',12,'LS','images\salade_caprese.jpg','La salade Caprese est un plat italien traditionnel à base de tomates, de mozzarella et de basilic frais. Il est souvent assaisonné dhuile dolive et de vinaigre balsamique pour un goût frais et savoureux.','Ingrédients pour une salade Caprese : tomates, mozzarella, basilic frais, huile dolive, vinaigre balsamique.');
+INSERT INTO plat VALUES('P21','Soupe à loignon','Végétarien',10,'SB','images\soupe_oignon.jpg','La soupe à loignon est une spécialité française chaude et réconfortante. Elle est préparée avec des oignons caramélisés, du bouillon de boeuf, du pain et du fromage. Elle est souvent servie avec une tranche de pain grillé et du fromage fondu sur le dessus.','Ingrédients pour une soupe à loignon : oignons, bouillon de boeuf, pain, fromage.');
+INSERT INTO plat VALUES('P22','Houmous','Végétarien',8,'SA','images\houmous.jpg','Le houmous est une spécialité culinaire du Moyen-Orient à base de pois chiches, de tahini, dhuile dolive, de jus de citron et dail. Il est souvent servi avec du pain pita ou des légumes frais pour un apéritif sain et savoureux.','Ingrédients pour le houmous : pois chiches, tahini, huile dolive, jus de citron, ail.');
+INSERT INTO plat VALUES('P23','Bruschetta','Végétarien',11,'SS','images\bruschetta.jpg','La bruschetta est un plat italien à base de pain grillé, dhuile dolive, dail et de tomates fraîches. Elle peut être agrémentée de basilic, de fromage et de charcuterie pour une variété de saveurs délicieuses.','Ingrédients pour une bruschetta : pain grillé, huile dolive, ail, tomates fraîches, basilic.');
+INSERT INTO plat VALUES('P24','Couscous royal','Halal',30,'EAEB','images\couscous_royal.jpg','Le couscous royal est un plat traditionnel marocain composé de semoule de couscous, de légumes variés tels que des carottes, des navets, des courgettes, des pois chiches et des oignons, ainsi que de viandes telles que de lagneau, du poulet, des merguez et des boulettes de viande. Le plat est souvent servi avec une sauce épicée et des raisins secs pour une touche sucrée.','Ingrédients pour un couscous royal : semoule de couscous, légumes variés, viandes variées, épices.');
+INSERT INTO plat VALUES('P25','Tagine de poulet aux olives','Halal',23,'AA','images\tagine_poulet_olives.jpg','Le tagine de poulet aux olives est un plat marocain traditionnel préparé dans un plat en terre cuite du même nom. Le plat est composé de poulet, dolives, doignons, de citron et dépices. Il est généralement servi avec du pain ou de la semoule de couscous.','Ingrédients pour un tagine de poulet aux olives : poulet, olives, oignons, citron, épices.');
+INSERT INTO plat VALUES('P26','Kefta Mkaouara','Halal',18,'MA','images\kefta_mkaouara.jpg','Le Kefta Mkaouara est un plat marocain composé de boulettes de viande hachée (généralement de lagneau ou du bœuf) cuites dans une sauce tomate épicée avec des oignons et des poivrons. Il est généralement servi avec du pain ou de la semoule de couscous.','Ingrédients pour un Kefta Mkaouara : viande hachée, sauce tomate, oignons, poivrons, épices.');
+INSERT INTO plat VALUES('P27','Mrouzia','Halal',28,'MA','images\mrouzia.jpg','Le mrouzia est un plat marocain traditionnel composé de viande dagneau ou de boeuf cuite lentement dans une sauce sucrée et épicée à base de miel, de ras el hanout (un mélange dépices) et damandes. Le plat est souvent servi avec des fruits secs et de la semoule de couscous.','Ingrédients pour un mrouzia : viande dagneau ou de boeuf, miel, ras el hanout, amandes, fruits secs.');
+INSERT INTO plat VALUES('P28','Harrira','Halal',12,'MA','images\harrira.jpg','La harira est une soupe marocaine traditionnelle servie pendant le mois de Ramadan. Elle est composée de viande dagneau, de pois chiches, de lentilles, de tomates, doignons et de coriandre, le tout cuit dans un bouillon épicé. La soupe est souvent servie avec des dattes et des biscuits marocains.','Ingrédients pour une harira : viande dagneau, pois chiches, lentilles, tomates, oignons, coriandre, épices.');
+INSERT INTO plat VALUES('P29','Tanjia','Halal',25,'AA','images\tanjia.jpg','La tanjia est un plat traditionnel de Marrakech préparé à partir de viande dagneau ou de boeuf, de graisse fondue, dail, de gingembre et de cumin. Le tout est cuit lentement dans un pot en terre cuite du même nom. Le plat est généralement servi avec du pain marocain.','Ingrédients pour une tanjia : viande dagneau ou de boeuf, graisse fondue, ail, gingembre, cumin.');
+
+
 
 
 
@@ -77,6 +89,16 @@ INSERT INTO categorie VALUES('P16',0,0,0,0,1);
 INSERT INTO categorie VALUES('P17',0,0,0,0,1);
 INSERT INTO categorie VALUES('P18',0,0,0,0,1);
 INSERT INTO categorie VALUES('P19',0,0,0,0,1);
+INSERT INTO categorie VALUES('P20',0,0,1,1,0);
+INSERT INTO categorie VALUES('P21',0,0,1,0,0);
+INSERT INTO categorie VALUES('P22',0,0,1,0,0);
+INSERT INTO categorie VALUES('P23',0,0,1,0,0);
+INSERT INTO categorie VALUES('P24',0,0,0,1,0);
+INSERT INTO categorie VALUES('P25',0,0,0,1,0);
+INSERT INTO categorie VALUES('P26',0,0,0,1,0);
+INSERT INTO categorie VALUES('P27',0,0,0,1,0);
+INSERT INTO categorie VALUES('P28',0,0,0,1,0);
+INSERT INTO categorie VALUES('P29',0,0,0,1,0);
 
 DROP TABLE IF EXISTS panier;
 
