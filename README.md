@@ -5,7 +5,7 @@ R209 - Web
 
 [x] rechercher une catégorie
 
-[] page plat (julien, quasi fini) : ajouter une qte à ajouter au panier.
+[x] page plat (julien, quasi fini) : ajouter une qte à ajouter au panier.
 
 [] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
 
