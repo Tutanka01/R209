@@ -1,18 +1,12 @@
 <?
 session_start();
 
-if ($_SESSION['user']==""){
-    header("Location: index.php");
+if (!isset($_SESSION['user'])){
+    echo '<script>alert("Vous devez vous connecter pour ajouter/retirer des plats");</script>';
+    header("Location: mainapage.php");
     exit;
-} elseif ($_SESSION['id_user']=""){
-    header("Location: index.php");
-    exit;
+} else {
 }
-
-$user = $_SESSION['user'];
-$id_user = $_SESSION['id_user'];
-echo $id_user;
-$plat = $_GET['id_plat'];
 ?>
 <?php
 $db = new SQLite3('sqlite.sqlite');
@@ -55,7 +49,11 @@ if ($action == "ajouter") {
     }
 }
 
-// Redirection vers la page précédente
-header("Location: mainapage.php");
+// Redirection vers la page mainapage.php si il vient pas du panier sinon vers la page panier.php
+if (isset($_GET['from_panier']) && $_GET['from_panier'] == 1) {
+    header("Location: panier.php");
+} else {
+    header("Location: mainapage.php");
+}
 exit;
 ?>

@@ -1,13 +1,12 @@
 <?
     session_start();
-    if (isset($_SESSION['user'])){
-        echo $_SESSION['user'];
-    } else {
-    }
+    // Si on ajoute un plat au panier on affiche cd message
+    // La variabl is_add est utilisee/declaree dans le fichier panier.php
     if (isset($_SESSION['is_add'])) {
         $is_add = $_SESSION['is_add'];
         echo "<script>alert('Plat ajoute');</script>";
         unset($_SESSION['is_add']); 
+    // Si on enleve un plat au panier on affiche ce message
     } elseif (isset($_SESSION['is_remove'])) {
         $is_add = $_SESSION['is_remove'];
         echo "<script>alert('Plat enleve');</script>";
@@ -29,9 +28,19 @@
         </div>
         <div class="boutons">
             <div class="connexion">
-                <form action="connexion.php" method="POST">
-                    <button class="connexion-button">Connexion</button>
-                </form>
+            <?
+                    if (isset($_SESSION['user'])) {
+                        echo "<div class='decobutton'>";
+                            echo "<form action='connexion.php?deconnexion=1' method='POST'>";
+                            echo "<button class='deconnexion-button'>Déconnexion</button>";
+                            echo "</form>";
+                        echo "</div>";
+                    } else {
+                        echo "<form action='connexion.php' method='POST'>";
+                            echo "<button class='connexion-button'>Connexion</button>";
+                        echo "</form>";
+                    }                    
+                ?>
             </div>
         </div>    
         <div class="panier">

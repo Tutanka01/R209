@@ -31,7 +31,7 @@ echo '<input type="hidden" name="new" value="'.$donnee.'">';
 </form>
 <?
     $db = new SQLite3('sqlite.sqlite');
-    $sql= 'SELECT DISTINCT * FROM '.$donnee;
+    $sql= 'SELECT DISTINCT * FROM '.$donnee; 
     $results = $db->query($sql);
     while ($row=$results->fetchArray()) {
         echo '<div class="button">';
