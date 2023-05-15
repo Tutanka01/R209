@@ -30,9 +30,8 @@
             <div class="connexion">
             <?
                     if (isset($_SESSION['user'])) {
-                        echo "<button class='connexion-button'>Bonjour ".$_SESSION['user']."</button>";
                         echo "<div class='decobutton'>";
-                            echo "<form action='deconnexion.php' method='POST'>";
+                            echo "<form action='connexion.php?deconnexion=1' method='POST'>";
                             echo "<button class='deconnexion-button'>Déconnexion</button>";
                             echo "</form>";
                         echo "</div>";

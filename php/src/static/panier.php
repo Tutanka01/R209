@@ -51,7 +51,7 @@ $total = 0;
                     </form>
                     </li>";
                 }
-                ?>                    
+                ?>     
             </ul>
         </div>
         <div class="total">

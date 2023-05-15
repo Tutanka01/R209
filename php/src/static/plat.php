@@ -1,5 +1,4 @@
-<?session_start();
-?>
+<?session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -44,8 +43,6 @@
             ?>
             <h4>Description :</h4>
             <?
-                //$sql = "SELECT DISTINCT * FROM plat WHERE ID_plat = '".$id_plat."'";
-                //$results = $db->query($sql);
                 while ($row = $results->fetchArray()) {
                     echo "<p>".$row['description']."</p>";
                 }
