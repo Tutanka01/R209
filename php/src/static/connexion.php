@@ -1,5 +1,10 @@
 <?
     session_start();
+    if (isset($_GET['deconnexion'])){
+        session_destroy(); // Détruit la session actuelle (vide $_SESSION)
+        header("Location: mainapage.php");
+    }
+
     if (isset($_SESSION['user'])){
         $error = "Vous êtes déjà connecté";
         echo $error;
@@ -35,7 +40,7 @@
         <h1>Connexion</h1>
         <form action="script_connexion.php" method="POST">
           <input type="text" name="user" placeholder="Login">
-          <input type="text" name="mdp" placeholder="Mot de passe" type="password">
+          <input type="password" name="mdp" placeholder="Mot de passe">
           <input type="submit" value="login">
         </form>
     </div>
