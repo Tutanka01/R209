@@ -25,6 +25,17 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $donnee = $_POST['new'];
 }
+
+$db = new SQLite3('sqlite.sqlite');
+$sql= 'PRAGMA table_info('.$donnee.')'; 
+$results = $db->query($sql);
+echo '<form action="nouveau.php" method="POST">';
+while ($row=$results->fetchArray()) {
+    echo '<div class="button">'.$row[1];
+    echo '<input type="text" name="plat">';
+    echo '</div></br>';
+}
+echo '<button type="submit">Envoyer</button>';
 ?>
 
 
