@@ -29,31 +29,30 @@ echo '<form action="admin_new.php" method="POST">';
     echo "<button type='submit'>Ajouter un nouveau</button>";
 echo "</form>";
 
-    $db = new SQLite3('sqlite.sqlite');
-    $sql= 'SELECT DISTINCT * FROM '.$donnee; 
-    $results = $db->query($sql);
-    while ($row=$results->fetchArray()) {
-        echo '<div class="button">';
-        echo $row[0];
-        foreach (range(1, (count($row)/2)-1) as $elt) {
-            echo ' | ';
-            echo $row[$elt];
-            }
-            echo '<form action="script_nouveau_admin.php" method="GET">';
-                echo '<input type="hidden" name="action" value="modif">';
-                echo '<input type="hidden" name="value" value="'.$row[0].'">';
-                echo '<button type="submit" name="modif" value="'.$row[0].'">Modifier</button>';
-            echo '</form>';
+$db = new SQLite3('sqlite.sqlite');
+$sql = 'SELECT DISTINCT * FROM '.$donnee; 
+$results = $db->query($sql);
+while ($row = $results->fetchArray()) {
+    echo '<div class="user-row">';
+    echo '<div class="user-field">ID:</div><div class="user-value">' . $row[0] . '</div>';
+    echo '<div class="user-field">Login:</div><div class="user-value">' . $row[1] . '</div>';
+    echo '<div class="user-field">Mot de passe:</div><div class="user-value">' . $row[2] . '</div>';
+    echo '<div class="user-field">Permission:</div><div class="user-value">' . $row[3] . '</div>';
 
-            echo '<form action="script_nouveau_admin.php" method="GET">';
-                echo '<input type="hidden" name="action" value="suppr">';
-                echo '<input type="hidden" name="value" value="'.$row[0].'">';
-                echo '<button type="submit" name="suppr" value="'.$row[0].'">Supprimer</button>';
-            echo '</form>';
+    echo '<form action="script_nouveau_admin.php" method="GET">';
+    echo '<input type="hidden" name="action" value="modif">';
+    echo '<input type="hidden" name="value" value="'.$row[0].'">';
+    echo '<button type="submit" name="modif" value="'.$row[0].'">Modifier</button>';
+    echo '</form>';
 
+    echo '<form action="script_nouveau_admin.php" method="GET">';
+    echo '<input type="hidden" name="action" value="suppr">';
+    echo '<input type="hidden" name="value" value="'.$row[0].'">';
+    echo '<button type="submit" name="suppr" value="'.$row[0].'">Supprimer</button>';
+    echo '</form>';
 
-            echo '</div>';
-    }
+    echo '</div>';
+}
 ?>
 </body>
 </html>
