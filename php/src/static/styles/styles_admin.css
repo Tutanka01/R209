@@ -6,6 +6,10 @@
 }
 
 /* Styles */
+a { 
+  color: inherit; 
+  text-decoration: none;
+} 
 .banner {
     display: flex;
     justify-content: space-between;

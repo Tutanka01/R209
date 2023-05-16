@@ -28,7 +28,7 @@
 <body>  
     <div class="banner">
         <div class="titre">
-            <h1>Mascaroni.fr</h1>
+            <a href="mainapage.php"><h1>Mascaroni.fr</h1></a>
         </div>
         <div class="panier">
             <form action="panier.php" method="POST">
