@@ -1,13 +1,9 @@
-<?
-session_start();
-
+<?session_start();
 if (!isset($_SESSION['user'])){
-    echo '<script>alert("Vous devez vous connecter pour ajouter/retirer des plats");</script>';
-    header("Location: mainapage.php");
+    header("Location: connexion.php?error=Vous devez vous connecter pour ajouter un plat au panier");
     exit;
 } else {
-}
-?>
+}?>
 <?php
 $db = new SQLite3('sqlite.sqlite');
 $user = $_SESSION['user'];

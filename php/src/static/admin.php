@@ -1,3 +1,13 @@
+<? session_start();
+if (!isset($_SESSION['admin'])) {
+    header('Location: index.php');
+}
+if (isset($_GET['modif'])) {
+    echo "<script>alert('Modification effectuée')</script>";
+} elseif (isset($_GET['suppr'])) {
+    echo "<script>alert('Suppression effectuée')</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +20,7 @@
 <body>
 <div class="banner">
         <div class="titre">
-            <h1>Mascaroni.fr</h1>
+            <a href="mainapage.php"><h1>Mascaroni.fr</h1></a>
         </div>
         <div class="boutons">
             <div class="connexion">
