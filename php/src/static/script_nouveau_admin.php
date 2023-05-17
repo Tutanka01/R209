@@ -1,9 +1,23 @@
 <?php
 $db = new SQLite3('sqlite.sqlite');
-$action = $_GET['action'];
-$propriete = $_GET['propriete'];
 
-if ($action === 'modif') {
+if (isset($_GET['action']) && isset($_GET['propriete'])){
+    $action = $_GET['action'];
+    echo $action;
+    $propriete = $_GET['propriete'];
+    echo $propriete;
+
+} elseif (isset($_POST['action']) &&isset($_POST['propriete'])){
+    echo "vbon post";
+    $action = $_POST['action'];
+    $propriete = $_POST['propriete'];
+
+} else {
+    $action = null;
+    $propriete = null;
+}
+
+if (isset($action) && $action === 'modif') {
     if ($propriete === 'user') {
         $user_id = $_GET['user_id'];
         // Récupérer les données de l'utilisateur à modifier
@@ -37,8 +51,7 @@ if ($action === 'modif') {
             </div>
 
             <h2>Modification de l'utilisateur</h2>
-
-            <form action='script_nouveau_admin.php' method='POST'>
+            <form action='script_modifier_admin.php' method='POST'>
                 <input type='hidden' name='action' value='modifier_utilisateur'>
                 <input type='hidden' name='user_id' value='$user_id'>
 
@@ -59,7 +72,7 @@ if ($action === 'modif') {
         </body>
         </html>
         ";
-    } elseif ($propriete === 'categorie') {
+    } elseif (isset($propriete)&&$propriete === 'categorie') {
         $categorie_id = $_GET['categorie_id'];
         // Récupérer les données de la catégorie à modifier
         $query = "SELECT * FROM categorie WHERE ID_plat = '$categorie_id'";
@@ -93,7 +106,7 @@ if ($action === 'modif') {
 
             <h2>Modification de la catégorie</h2>
 
-            <form action='script_nouveau_admin.php' method='POST'>
+            <form action='script_modifier_admin.php' method='POST'>
                 <input type='hidden' name='action' value='modifier_categorie'>
                 <input type='hidden' name='categorie_id' value='$categorie_id'>
 
@@ -117,7 +130,7 @@ if ($action === 'modif') {
         </body>
         </html>
         ";
-    } elseif ($propriete === 'plat') {
+    } elseif (isset($propriete)&&$propriete === 'plat') {
         $plat_id = $_GET['plat_id'];
         // Récupérer les données du plat à modifier
         $query = "SELECT * FROM plat WHERE ID_plat = '$plat_id'";
@@ -151,7 +164,7 @@ if ($action === 'modif') {
 
             <h2>Modification du plat</h2>
 
-            <form action='script_nouveau_admin.php' method='POST'>
+            <form action='script_modifier_admin.php' method='POST'>
                 <input type='hidden' name='action' value='modifier_plat'>
                 <input type='hidden' name='plat_id' value='$plat_id'>
 
@@ -182,51 +195,6 @@ if ($action === 'modif') {
         </html>
         ";
     }
-} elseif ($action === 'modifier_utilisateur') {
-    $user_id = $_POST['user_id'];
-    $login = $_POST['login'];
-    $passwd = $_POST['passwd'];
-    $perm = $_POST['perm'];
-
-    // Mettre à jour l'utilisateur dans la base de données
-    $query = "UPDATE user SET login='$login', passwd='$passwd', perm='$perm' WHERE ID_user='$user_id'";
-    $db->exec($query);
-
-    // Rediriger vers la page d'administration
-    header('Location: admin.php');
-    exit();
-} elseif ($action === 'modifier_categorie') {
-    $categorie_id = $_POST['categorie_id'];
-    $chaud = $_POST['chaud'];
-    $froid = $_POST['froid'];
-    $entree = $_POST['entree'];
-    $plat = $_POST['plat'];
-    $dessert = $_POST['dessert'];
-
-    // Mettre à jour la catégorie dans la base de données
-    $query = "UPDATE categorie SET chaud='$chaud', froid='$froid', entree='$entree', plat='$plat', dessert='$dessert' WHERE ID_plat='$categorie_id'";
-    $db->exec($query);
-
-    // Rediriger vers la page d'administration
-    header('Location: admin.php');
-    exit();
-} elseif ($action === 'modifier_plat') {
-    $plat_id = $_POST['plat_id'];
-    $nom_plat = $_POST['nom_plat'];
-    $specificite = $_POST['specificite'];
-    $prix = $_POST['prix'];
-    $auteur = $_POST['auteur'];
-    $lien = $_POST['lien'];
-    $description = $_POST['description'];
-    $ingredient = $_POST['ingredient'];
-
-    // Mettre à jour le plat dans la base de données
-    $query = "UPDATE plat SET nom_plat='$nom_plat', spécificité='$specificite', prix='$prix', auteur='$auteur', Lien='$lien', description='$description', ingredient='$ingredient' WHERE ID_plat='$plat_id'";
-    $db->exec($query);
-
-    // Rediriger vers la page d'administration
-    header('Location: admin.php');
-    exit();
 }
 
 $db->close();
