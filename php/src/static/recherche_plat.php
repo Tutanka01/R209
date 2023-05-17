@@ -18,6 +18,13 @@
         </div>
     </div>
     <div class="container">
+    <?
+        if (isset($_GET['filtre'])){
+            $filtre='DESC prix';
+            echo $filtre;
+        }
+    ?>
+
     <?php 
         // Je veux faire que, si la requette envoye est dans la liste des categories alors on affiche les plats de cette categorie
         // Sinon on afiche les plats qui correspondent a la requette
@@ -45,6 +52,25 @@
     ?>      
     </div>
     
+<div class="filtre">
+<?php
+echo "Filtrer par :";
+echo "<form action='recherche_plat.php?plat='".$plat."'&filtre=1 method='post'>";
+    echo "<button>Prix</button>";
+echo "</form>";
+
+$filtre=1;
+if ($filtre!=0) {
+    echo "test reussi";
+}
+
+$filtre="Select";
+$filtre="Select"."id_plat";
+echo $filtre;
+
+$filtre=1;
+?>
+
     <div class="les_plats">
     <?php
         $db = new SQLite3('sqlite.sqlite');
@@ -76,6 +102,7 @@
                 echo "</div>";
                 }
         }
+    echo $sql.$filtre;
     ?>
     </div>
 </body>

@@ -92,3 +92,12 @@ img {
   max-width:275px;
   max-height:183px;
 }
+
+.filtre {
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
