@@ -12,7 +12,7 @@
     <!--code pour recuperer le plat envoye par le formulaire de la page mainpage.php -->
     <div class="banner">
         <div class="titre">
-            <h1>Mascaroni.fr</h1>
+            <a href="mainapage.php"><h1>Mascaroni.fr</h1></a>
         </div>
         <div class="panier">
             <button>Panier</button>

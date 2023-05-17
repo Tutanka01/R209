@@ -6,6 +6,10 @@
 }
 
 /* Styles */
+a { 
+  color: inherit; 
+  text-decoration: none;
+} 
 .banner {
     display: flex;
     justify-content: space-between;
@@ -71,4 +75,29 @@
     padding: 20px;
     text-align: center;
     cursor: pointer;
+  }
+  .user-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .user-field {
+    font-weight: bold;
+    margin-bottom: 5px;
+  
+  }
+
+  .user-value {
+    margin: 0;
+    text-align: center;
+  }
+  .user-value img {
+    max-width: 300px;
+    max-height: 300px;
+    
   }

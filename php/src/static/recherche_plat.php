@@ -11,7 +11,7 @@
 <body>
     <div class="banner">
         <div class="titre">
-            <h1>Mascaroni.fr</h1>
+            <a href="mainapage.php"><h1>Mascaroni.fr</h1></a>
         </div>
         <div class="panier">
             <button>Panier</button>
@@ -28,7 +28,7 @@
     <?php 
         // Je veux faire que, si la requette envoye est dans la liste des categories alors on affiche les plats de cette categorie
         // Sinon on afiche les plats qui correspondent a la requette
-        $categories = ['Caud','Froid','Entree','Plat','Dessert','Accompagnement'];
+        $categories = ['chaud','froid','entree','plat','dessert'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupère la valeur de l'input avec name="plat"
             $plat = $_POST['plat'];

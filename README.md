@@ -5,17 +5,13 @@ R209 - Web
 
 - [x] rechercher une catégorie
 
-<<<<<<< HEAD
-[x] page plat (julien, quasi fini) : ajouter une qte à ajouter au panier.
-=======
 - [x] page plat (mohamad, quasi fini) : ajouter une qte à ajouter au panier.
->>>>>>> 3cd9c3fb1056627cb73af6eb6b49218901506e63
 
 - [x] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
 
 - [x] panier link avec un user (mohamad)
 
-- [] Admin page (julien)
+- [] Admin page (mohamad)
 
 - [] Liaison login admin -> admin page (mohamad)
 
@@ -26,7 +22,7 @@ R209 - Web
 - [] Avis des utilisateurs (mohamad)
 
 - [x] Plus de plats (Mohamad)//FIN
-- [ ] 
+  
 ## Pour acceder faire marcher le projet
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour les installer.
 - Cloner le repo

@@ -29,6 +29,7 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
 
         // Si l'utilisateur est l'administrateur, il est redirigé vers la page admin.php, sinon vers la page mainpage.php
         if ($_SESSION['user'] == 'admin'){
+            $_SESSION['admin'] = true;
             header("Location: admin.php");
             exit();
         } else {
