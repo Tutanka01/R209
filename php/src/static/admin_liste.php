@@ -93,8 +93,37 @@ $results = $db->query($sql);
                 <span class="user-field">Ingrédient :</span>
                 <span class="user-value"><?php echo $row['ingredient']; ?></span>
             <?php endif; ?>
-                </div>
-            <?php endwhile; ?>
 
+            <div class="actions">
+                <form action="script_nouveau_admin.php" method="GET">
+                    <input type="hidden" name="action" value="modif">
+                        <input type="hidden" name="propriete" value="<?php echo $type; ?>">
+                        <?php if ($type === 'user'): ?>
+                            <input type="hidden" name="user_id" value="<?php echo $row['ID_user']; ?>">
+                        <?php elseif ($type === 'plat'): ?>
+                            <input type="hidden" name="plat_id" value="<?php echo $row['ID_plat']; ?>">
+                        <?php elseif ($type === 'categorie'): ?>
+                            <input type="hidden" name="categorie_id" value="<?php echo $row['ID_plat']; ?>">
+                        <?php endif; ?>
+                    <button type="submit">Modifier</button>
+                </form>
+            </div>
+            <div>
+                <form action="script_nouveau_admin.php" method="GET">
+                    <input type="hidden" name="action" value="suppr">
+                    <input type="hidden" name="propriete" value="<?php echo $type; ?>">
+                    <?php if ($type === 'user'): ?>
+                        <input type="hidden" name="user_id" value="<?php echo $row['ID_user']; ?>">
+                    <?php elseif ($type === 'plat'): ?>
+                        <input type="hidden" name="plat_id" value="<?php echo $row['ID_plat']; ?>">
+                    <?php elseif ($type === 'categorie'): ?>
+                        <input type="hidden" name="categorie_id" value="<?php echo $row['ID_plat']; ?>">
+                    <?php endif; ?>
+                    <button type="submit">Supprimer</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    <?php endwhile; ?>
 </body>
 </html>
