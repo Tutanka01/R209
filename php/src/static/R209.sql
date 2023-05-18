@@ -2,18 +2,17 @@ BEGIN TRANSACTION;
 
 DROP TABLE IF EXISTS user;
 
-CREATE TABLE user
-    (ID_user    TEXT PRIMARY KEY,
-     login   TEXT NOT NULL,
-     passwd     TEXT NOT NULL,
-     perm       TEXT NOT NULL
-     );
+CREATE TABLE user (
+    ID_user INTEGER PRIMARY KEY AUTOINCREMENT,
+    login TEXT NOT NULL,
+    passwd TEXT NOT NULL,
+    perm TEXT NOT NULL
+);
 
-INSERT INTO user VALUES('U1','Julien','1234','admin');
-INSERT INTO user VALUES('U2','Mohamad','123','guest');
-INSERT INTO user VALUES('U3','Jean','123','guest');
-INSERT INTO user VALUES('U4','Pierre','123','guest');
-INSERT INTO user VALUES('U5','admin','admin','admin');
+INSERT INTO user (login, passwd, perm) VALUES ('Julien', '1234', 'admin');
+INSERT INTO user (login, passwd, perm) VALUES ('Jean', '1234', 'user');
+INSERT INTO user (login, passwd, perm) VALUES ('Pierre', '1234', 'user');
+INSERT INTO user (login, passwd, perm) VALUES ('admin', 'admin', 'admin');
 DROP TABLE IF EXISTS plat;
 
 CREATE TABLE plat

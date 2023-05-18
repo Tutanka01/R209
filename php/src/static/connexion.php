@@ -46,9 +46,9 @@
     </div>
     <div class="container_enregistrer">
         <h1>S'enregistrer</h1>
-        <form action="script_connexion.php" method="POST">
-          <input type="text" name="user" placeholder="Login">
-          <input type="password" name="mdp" placeholder="Mot de passe">
+        <form action="script_modifier_admin.php" method="POST">
+          <input type='text' id='login' name='login' placeholder="login">
+          <input type='password' id='passwd' name='passwd' placeholder="mot de passe" required>
           <input type="submit" value="login">
         </form>
     </div>

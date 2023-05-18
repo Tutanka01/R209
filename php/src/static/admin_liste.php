@@ -48,7 +48,7 @@ $results = $db->query($sql);
 
     <h2>Liste des <?php echo $label; ?></h2>
     <div class="ajout">
-        <form action='script_modifier_admin.php' method='POST'>
+        <form action='script_nouveau_admin.php' method='POST'>
             <input type="hidden" name="action" value="ajout">
             <input type="hidden" name="propriete" value="<?php echo $type; ?>">
             <button type="submit">Ajouter</button>
