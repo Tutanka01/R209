@@ -47,7 +47,13 @@ $results = $db->query($sql);
     </div>
 
     <h2>Liste des <?php echo $label; ?></h2>
-
+    <div class="ajout">
+        <form action='script_modifier_admin.php' method='POST'>
+            <input type="hidden" name="action" value="ajout">
+            <input type="hidden" name="propriete" value="<?php echo $type; ?>">
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
     <?php while ($row = $results->fetchArray()): ?>
         <div class="user-row">
             <?php if ($type === 'user'): ?>

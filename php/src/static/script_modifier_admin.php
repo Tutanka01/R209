@@ -8,7 +8,11 @@ if (isset($_GET['action'])){
 } elseif (isset($_POST['action'])){
     $action = $_POST['action'];
     $propriete = $_POST['propriete'];
-
+    if (isset($_POST['propriete'])) {
+        $propriete = $_POST['propriete'];
+    } else {
+        $propriete = null;
+    }
 } else {
     $action = null;
     $propriete = null;
@@ -23,10 +27,8 @@ if ($action === 'modifier_utilisateur') {
     // Mettre à jour l'utilisateur dans la base de données
     $query = "UPDATE user SET login='$login', passwd='$passwd', perm='$perm' WHERE ID_user='$user_id'";
     $db->exec($query);
-
     // Rediriger vers la page d'administration
-    echo "<script>alert('Utilisateur modifié avec succès !')</script>";
-    header('Location: admin.php');
+    header('Location: admin.php?modification=1');
     exit();
 } elseif ($action === 'modifier_categorie') {
     $categorie_id = $_POST['categorie_id'];
@@ -41,8 +43,7 @@ if ($action === 'modifier_utilisateur') {
     $db->exec($query);
 
     // Rediriger vers la page d'administration
-    echo "<script>alert('Catégorie modifiée avec succès !')</script>";
-    header('Location: admin.php');
+    header('Location: admin.php?modification=1');
     exit();
 } elseif ($action === 'modifier_plat') {
     $plat_id = $_POST['plat_id'];
@@ -58,9 +59,8 @@ if ($action === 'modifier_utilisateur') {
     $query = "UPDATE plat SET nom_plat='$nom_plat', spécificité='$specificite', prix='$prix', auteur='$auteur', Lien='$lien', description='$description', ingredient='$ingredient' WHERE ID_plat='$plat_id'";
     $db->exec($query);
 
-    echo "<script>alert('Plat modifié avec succès !')</script>";
     // Rediriger vers la page d'administration
-    header('Location: admin.php');
+    header('Location: admin.php?modification=1');
     exit();
 }
 ?>

@@ -6,6 +6,8 @@ if (isset($_GET['modif'])) {
     echo "<script>alert('Modification effectuée')</script>";
 } elseif (isset($_GET['suppr'])) {
     echo "<script>alert('Suppression effectuée')</script>";
+}elseif (isset($_GET['modification'])) {
+    echo "<script>alert('Modification effectue avec succes')</script>";
 }
 ?>
 <!DOCTYPE html>
