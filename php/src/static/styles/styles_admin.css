@@ -96,3 +96,8 @@ a {
     margin: 0;
     text-align: center;
   }
+  .user-value img {
+    max-width: 300px;
+    max-height: 300px;
+    
+  }
