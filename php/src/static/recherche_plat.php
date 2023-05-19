@@ -14,7 +14,9 @@
             <a href="mainapage.php"><h1>Mascaroni.fr</h1></a>
         </div>
         <div class="panier">
-            <button>Panier</button>
+            <form action="panier.php" method="POST">
+                <button>Panier</button>
+            </form>
         </div>
     </div>
     <div class="container">

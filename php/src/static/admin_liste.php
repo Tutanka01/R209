@@ -115,7 +115,7 @@ $results = $db->query($sql);
                 </form>
             </div>
             <div>
-                <form action="script_nouveau_admin.php" method="GET">
+                <form action="script_modifier_admin.php" method="GET">
                     <input type="hidden" name="action" value="suppr">
                     <input type="hidden" name="propriete" value="<?php echo $type; ?>">
                     <?php if ($type === 'user'): ?>

@@ -22,6 +22,8 @@ R209 - Web
 - [] Avis des utilisateurs (mohamad)
 
 - [x] Plus de plats (Mohamad)//FIN
+
+- [] Avis (mohamad)
   
 ## Pour acceder faire marcher le projet
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour les installer.
@@ -50,4 +52,4 @@ Plats :
 ![Plats](images/plats.png)
 
 Panier :
-![Panier](images/panier.png)
+![Panier](images/panier.png) 

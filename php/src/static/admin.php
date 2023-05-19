@@ -4,10 +4,12 @@ if (!isset($_SESSION['admin'])) {
 }
 if (isset($_GET['modif'])) {
     echo "<script>alert('Modification effectuée')</script>";
-} elseif (isset($_GET['suppr'])) {
+} elseif (isset($_GET['suppression'])) {
     echo "<script>alert('Suppression effectuée')</script>";
 }elseif (isset($_GET['modification'])) {
     echo "<script>alert('Modification effectue avec succes')</script>";
+}elseif (isset($_GET['ajout'])){
+    echo "<script>alert('Ajout effectue avec succes')</script>";
 }
 ?>
 <!DOCTYPE html>
