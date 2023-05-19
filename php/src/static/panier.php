@@ -1,10 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])){
-    $error = "Vous êtes déjà connecté";
-    echo $error;
 } else {
-    header("Location: connexion.php");
+    header("Location: connexion.php?error=not_connected");
 }
 
 $user = $_SESSION['user'];
@@ -50,6 +48,7 @@ $total = 0;
                     $montant = $row['QTE'] * $row['prix'];
                     $total += $montant;
                     echo "<li>".$row['nom_plat']."<p> Prix unité : ".$row['prix']." €</p><p>Quantité : ".$row['QTE']."</p><p>Montant : ".$montant." €</p>
+                    <img src='".$row['Lien']."' alt='".$row['nom_plat']."'>
                     <form action='script_ajout_retirer_panier.php?action=retirer&id_plat=".$row['ID_plat']."&from_panier=1' method='post'>
                         <button>Retirer du panier</button>
                     </form>

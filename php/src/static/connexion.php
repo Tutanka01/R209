@@ -11,9 +11,11 @@
     } else {
         if (isset($_GET['error'])){
             $error = $_GET['error'];
-            echo $error;
         } else {
         }
+    }
+    if(isset($_GET['error']) && $_GET['error'] == "not_connected") {
+        echo "<script>alert('Vous devez vous connecter pour acceder au panier');</script>";
     }
 ?>
 <!DOCTYPE html>
