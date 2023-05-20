@@ -60,8 +60,11 @@ if ($action === 'modifier_utilisateur') {
 } elseif ($action === 'ajouter_utilisateur') {
         $login = $_POST['login'];
         $passwd = $_POST['passwd'];
-        $perm = $_POST['perm'];
-
+        if (isset($_POST['perm'])){
+            $perm = $_POST['perm'];
+        } else {
+            $perm = 'utilisateur';
+        }
         // Ajouter l'utilisateur dans la base de données
         $query = "INSERT INTO user (login, passwd, perm) VALUES ('$login', '$passwd', '$perm')";
         $db->exec($query);

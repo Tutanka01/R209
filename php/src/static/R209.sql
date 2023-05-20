@@ -129,11 +129,11 @@ CREATE TABLE panier
 DROP TABLE IF EXISTS commande;
 
 CREATE TABLE commande
-    ID_commande INTEGER PRIMARY KEY AUTOINCREMENT,
+    (ID_commande INTEGER PRIMARY KEY AUTOINCREMENT,
     ID_user TEXT NOT NULL,
     ID_plat TEXT NOT NULL,
     FOREIGN KEY (ID_user) REFERENCES user (ID_user),
-    FOREIGN KEY (ID_plat) REFERENCES plat (ID_plat);
+    FOREIGN KEY (ID_plat) REFERENCES plat (ID_plat));
 
 
 COMMIT;

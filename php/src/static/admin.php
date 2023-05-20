@@ -53,10 +53,10 @@ if (isset($_GET['modif'])) {
             <button type="submit">Plat</button>
         </form>
     </div>
-    <form action="admin_gestion.php?propriete=gestionnaire" method="POST">
+    <form action="admin_liste.php?propriete=Commandes" method="POST">
         <div class="button">
-            <input type="hidden" name="type" value="Gestion">
-            <button type="submit">Gestionnaire</button>
+            <input type="hidden" name="type" value="commandes">
+            <button type="submit">Commandes</button>
     </div>
     </form>
 

@@ -14,7 +14,12 @@ if ($propriete === 'user') {
     $type = 'plat';
     $label = 'Plats';
     $sql = "SELECT * FROM plat";
-} else {
+} elseif ($propriete === "Commandes"){
+    $type = 'commandes';
+    $label = 'commandes';
+    $sql = "SELECT * FROM commande";
+} 
+else {
     // Gérer le cas où la propriété n'est pas valide
     echo "Propriété non valide";
     exit;
@@ -98,6 +103,13 @@ $results = $db->query($sql);
                 <span class="user-value"><?php echo $row['description']; ?></span>
                 <span class="user-field">Ingrédient :</span>
                 <span class="user-value"><?php echo $row['ingredient']; ?></span>
+            <?php elseif ($type === 'gestionnaire') : ?>
+                <span class="user-field">ID de la commande :</span>
+                <span class="user-value"><?php echo $row['ID_commande']; ?></span>
+                <span class="user-field">ID du user :</span>
+                <span class="user-value"><?php echo $row['ID_user']; ?></span>
+                <span class="user-field">ID du plat :</span>
+                <span class="user-value"><?php echo $row['ID_plat']; ?></span>
             <?php endif; ?>
 
             <div class="actions">
