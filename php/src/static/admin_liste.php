@@ -26,7 +26,6 @@ else {
 }
 
 $results = $db->query($sql);
-var_dump($results);
 ?>
 
 <!DOCTYPE html>
@@ -104,15 +103,16 @@ var_dump($results);
                 <span class="user-value"><?php echo $row['description']; ?></span>
                 <span class="user-field">Ingrédient :</span>
                 <span class="user-value"><?php echo $row['ingredient']; ?></span>
-            <?php elseif ($type === 'gestionnaire') : ?>
+            <?php elseif ($type === 'commande') : ?>
                 <span class="user-field">ID de la commande :</span>
                 <span class="user-value"><?php echo $row['ID_commande']; ?></span>
                 <span class="user-field">ID du user :</span>
                 <span class="user-value"><?php echo $row['ID_user']; ?></span>
-                <span class="user-field">ID du plat :</span>
+                <span class="user-field">ID des plats commandes :</span>
                 <span class="user-value"><?php echo $row['ID_plat']; ?></span>
             <?php endif; ?>
 
+            <?if ($type != "commande") { // si le type n'est pas commande il genere le formulaire de supprimer ou modifier?> 
             <div class="actions">
                 <form action="script_nouveau_admin.php" method="GET">
                     <input type="hidden" name="action" value="modif">
@@ -142,6 +142,9 @@ var_dump($results);
                 </form>
                 </div>
             </div>
+            <?} else { // si il l'est il met le formulaire de valider la commande?>
+                <button onclick="window.location.href='https://slideplayer.fr/slide/1294377/3/images/47/C%E2%80%99est+bien.jpg'">valider</button>
+            <?}?>
         </div>
     <?php endwhile; ?>
 </body>
