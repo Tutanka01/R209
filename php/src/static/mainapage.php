@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="container">
-        <h1>Quel plat voulez vous ?</h1>
+        <h1>Explore de nouveaux délices !</h1>
         <form action="recherche_plat.php" method="POST">
           <input type="text" name="plat" placeholder="ex : 'Tajine' ">
           <input type="submit" value="Chercher">

@@ -113,6 +113,8 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
   }
   .lsite ul {
     list-style-type: none;
