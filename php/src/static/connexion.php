@@ -11,9 +11,11 @@
     } else {
         if (isset($_GET['error'])){
             $error = $_GET['error'];
-            echo $error;
         } else {
         }
+    }
+    if(isset($_GET['error']) && $_GET['error'] == "not_connected") {
+        echo "<script>alert('Vous devez vous connecter pour acceder au panier');</script>";
     }
 ?>
 <!DOCTYPE html>
@@ -47,9 +49,10 @@
     <div class="container_enregistrer">
         <h1>S'enregistrer</h1>
         <form action="script_modifier_admin.php" method="POST">
-          <input type='text' id='login' name='login' placeholder="login">
+          <input type='text' id='login' name='login' placeholder="login" required>
           <input type='password' id='passwd' name='passwd' placeholder="mot de passe" required>
-          <input type="submit" value="login">
+          <input type='hidden' id='action' name='action' value='ajouter_utilisateur'>
+          <input type="submit" value="S'enregistrer">
         </form>
     </div>
 </body>

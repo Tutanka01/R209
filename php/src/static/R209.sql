@@ -54,7 +54,16 @@ INSERT INTO plat VALUES('P26','Kefta Mkaouara','Halal',18,'MA','images\kefta_mka
 INSERT INTO plat VALUES('P27','Mrouzia','Halal',28,'MA','images\mrouzia.jpg','Le mrouzia est un plat marocain traditionnel composé de viande dagneau ou de boeuf cuite lentement dans une sauce sucrée et épicée à base de miel, de ras el hanout (un mélange dépices) et damandes. Le plat est souvent servi avec des fruits secs et de la semoule de couscous.','Ingrédients pour un mrouzia : viande dagneau ou de boeuf, miel, ras el hanout, amandes, fruits secs.');
 INSERT INTO plat VALUES('P28','Harrira','Halal',12,'MA','images\harrira.jpg','La harira est une soupe marocaine traditionnelle servie pendant le mois de Ramadan. Elle est composée de viande dagneau, de pois chiches, de lentilles, de tomates, doignons et de coriandre, le tout cuit dans un bouillon épicé. La soupe est souvent servie avec des dattes et des biscuits marocains.','Ingrédients pour une harira : viande dagneau, pois chiches, lentilles, tomates, oignons, coriandre, épices.');
 INSERT INTO plat VALUES('P29','Tanjia','Halal',25,'AA','images\tanjia.jpg','La tanjia est un plat traditionnel de Marrakech préparé à partir de viande dagneau ou de boeuf, de graisse fondue, dail, de gingembre et de cumin. Le tout est cuit lentement dans un pot en terre cuite du même nom. Le plat est généralement servi avec du pain marocain.','Ingrédients pour une tanjia : viande dagneau ou de boeuf, graisse fondue, ail, gingembre, cumin.');
-
+INSERT INTO plat VALUES('P30','Croissant','Classique',2,'Boulangerie du Coin','images/croissant.jpg','Le croissant est une viennoiserie dorigine autrichienne, très populaire en France. Il est fait à base de pâte feuilletée et a une forme caractéristique en croissant de lune.','Les ingrédients principaux pour un croissant sont la farine, le beurre, le lait, le sucre, la levure et le sel.');
+INSERT INTO plat VALUES('P31','Boeuf Bourguignon','Traditionnel',30,'Le Chef Français','images/boeuf_bourguignon.jpg','Le bœuf bourguignon est un plat emblématique de la cuisine française, originaire de la région de Bourgogne. Il sagit dun ragoût de bœuf mijoté lentement avec du vin rouge, des légumes et des herbes, ce qui lui confère une saveur riche et délicieuse.','Les principaux ingrédients pour un bœuf bourguignon sont le bœuf (généralement du paleron ou du gîte), du vin rouge, des oignons, des carottes, du bouquet garni, de lail et des champignons.');
+INSERT INTO plat VALUES('P33','Escargots de Bourgogne','Gastronomique',18,'La Maison des Escargots','images/escargots.jpg','Les escargots de Bourgogne sont un mets délicat et raffiné de la cuisine française. Ils sont cuits avec du beurre à lail et des herbes, et servis dans leurs coquilles. Les escargots sont souvent dégustés avec du pain frais.','Les ingrédients principaux pour les escargots de Bourgogne sont les escargots, le beurre, lail, le persil et les épices.');
+INSERT INTO plat VALUES('P34','Quiche Lorraine','Classique',12,'La Petite Brasserie','images/quiche_lorraine.jpg','La quiche lorraine est une spécialité de la cuisine française, originaire de la région de Lorraine. Elle est composée dune pâte brisée garnie dun mélange de lardons, dœufs, de crème fraîche et de fromage. La quiche est cuite au four jusquà ce quelle soit dorée et croustillante.','Les ingrédients pour une quiche lorraine incluent la pâte brisée, les lardons, les œufs, la crème fraîche, le fromage râpé et les assaisonnements.');
+INSERT INTO plat VALUES('P35','Magret de Canard','Gastronomique',28,'Le Bistro Français','images/magret_de_canard.jpg','Le magret de canard est un plat délicat et savoureux de la cuisine française. Il sagit du filet de poitrine de canard gras, généralement cuit à la poêle, et servi avec une sauce au choix (par exemple, à lorange ou au miel). Le magret de canard est apprécié pour sa texture tendre et son goût riche.','Les ingrédients principaux pour un magret de canard sont le filet de canard, le sel, le poivre et la sauce de votre choix.');
+INSERT INTO plat VALUES('P36','Ratatouille','Méditerranéenne',16,'Le Restaurant Provençal','images/ratatouille.jpg','La ratatouille est un plat emblématique de la cuisine provençale, originaire de la région méditerranéenne. Elle est composée dun mélange de légumes frais, tels que les aubergines, les courgettes, les poivrons, les tomates et les oignons, cuits lentement avec des herbes et des épices.','Les ingrédients pour une ratatouille comprennent les aubergines, les courgettes, les poivrons, les tomates, les oignons, lail, lhuile dolive, les herbes de Provence et les assaisonnements.');
+INSERT INTO plat VALUES('P37','Crêpes','Classique',8,'La Crêperie Bretonne','images/crepes.jpg','Les crêpes sont des spécialités de la cuisine bretonne, mais elles sont également très populaires dans toute la France. Elles sont préparées à base de pâte à crêpe, qui est ensuite cuite dans une poêle. Les crêpes peuvent être servies sucrées ou salées, avec une variété de garnitures au choix.','Les ingrédients de base pour les crêpes sont la farine, les œufs, le lait, le sucre, le beurre et la vanille (pour les crêpes sucrées) ou le sel (pour les crêpes salées).');
+INSERT INTO plat VALUES('P38','Bouillabaisse','Provençale',35,'Le Restaurant Méditerranéen','images/bouillabaisse.jpg','La bouillabaisse est une spécialité de la cuisine provençale, originaire de la région méditerranéenne. Il sagit dune soupe de poisson riche et parfumée, préparée avec une variété de poissons de mer, tels que le cabillaud, la lotte, le rouget, et servie avec des croûtons et de la rouille (une sauce à base de poivrons, dail et dhuile dolive).','Les ingrédients principaux pour une bouillabaisse comprennent une variété de poissons, des légumes (comme les oignons, les tomates et les pommes de terre), des herbes (comme le thym et le fenouil) et des épices (comme le safran).');
+INSERT INTO plat VALUES('P39','Cassoulet','Régional',22,'Le Restaurant Toulousain','images/cassoulet.jpg','Le cassoulet est un plat traditionnel de la cuisine toulousaine, dans le sud de la France. Il est préparé avec des haricots blancs, de la viande (lagneau et la saucisse) et des herbes, et cuit lentement jusquà ce que tous les ingrédients soient tendres et que les saveurs soient bien mélangées.','Les ingrédients pour un cassoulet incluent les haricots blancs, la viande (lagneau et la saucisse), les oignons, les carottes, le bouillon, les tomates, lail et les assaisonnements.');
+INSERT INTO plat VALUES('P40','Coq au au jus dorange','Régional',26,'Le Bistrot Français','images/coq_au_jus.jpg','Le coq au vin est un plat régional de la cuisine française, originaire de la région de Bourgogne. Il sagit dun coq (ou dun poulet) mijoté dans du vin rouge, avec des lardons, des champignons et des herbes aromatiques. Le coq au vin est apprécié pour sa saveur riche et son caractère rustique.','Les ingrédients principaux pour un coq au vin sont le coq (ou le poulet)s les champignons, les oignons, lail, le bouquet garni et les assaisonnements.');
 
 
 
@@ -98,6 +107,17 @@ INSERT INTO categorie VALUES('P26',0,0,0,1,0);
 INSERT INTO categorie VALUES('P27',0,0,0,1,0);
 INSERT INTO categorie VALUES('P28',0,0,0,1,0);
 INSERT INTO categorie VALUES('P29',0,0,0,1,0);
+INSERT INTO categorie VALUES('P30', 1, 0, 0, 1, 0);
+INSERT INTO categorie VALUES('P31', 0, 0, 0, 0, 1);
+INSERT INTO categorie VALUES('P33', 1, 0, 0, 1, 0);
+INSERT INTO categorie VALUES('P34', 0, 0, 1, 1, 0);
+INSERT INTO categorie VALUES('P35', 0, 1, 0, 1, 0);
+INSERT INTO categorie VALUES('P36', 0, 0, 1, 0, 0);
+INSERT INTO categorie VALUES('P37', 1, 0, 0, 1, 0);
+INSERT INTO categorie VALUES('P38', 0, 1, 1, 0, 0);
+INSERT INTO categorie VALUES('P39', 0, 0, 0, 0, 1);
+INSERT INTO categorie VALUES('P40', 0, 0, 1, 1, 0);
+
 
 DROP TABLE IF EXISTS panier;
 
@@ -105,5 +125,15 @@ CREATE TABLE panier
     (ID_user    TEXT NOT NULL,
      ID_plat    TEXT NOT NULL,
      QTE        INTEGER NOT NULL);
+
+DROP TABLE IF EXISTS commande;
+
+CREATE TABLE commande
+    (ID_commande INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_user TEXT NOT NULL,
+    ID_plat TEXT NOT NULL,
+    FOREIGN KEY (ID_user) REFERENCES user (ID_user),
+    FOREIGN KEY (ID_plat) REFERENCES plat (ID_plat));
+
 
 COMMIT;

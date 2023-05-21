@@ -85,3 +85,7 @@ a {
     color: var(--secondary-color);
     cursor: pointer;
   }
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }

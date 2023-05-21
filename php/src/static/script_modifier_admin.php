@@ -60,8 +60,11 @@ if ($action === 'modifier_utilisateur') {
 } elseif ($action === 'ajouter_utilisateur') {
         $login = $_POST['login'];
         $passwd = $_POST['passwd'];
-        $perm = $_POST['perm'];
-
+        if (isset($_POST['perm'])){
+            $perm = $_POST['perm'];
+        } else {
+            $perm = 'utilisateur';
+        }
         // Ajouter l'utilisateur dans la base de données
         $query = "INSERT INTO user (login, passwd, perm) VALUES ('$login', '$passwd', '$perm')";
         $db->exec($query);
@@ -99,7 +102,7 @@ if ($action === 'modifier_utilisateur') {
         // Rediriger vers la page d'administration
         header('Location: admin.php?ajout=1');
         exit();
-} elseif ($action === 'supprimer_utilisateur') {
+} elseif ($action === 'suppr' && $propriete === 'user') {
     $user_id = $_GET['user_id'];
 
     // Supprimer l'utilisateur de la base de données
@@ -109,7 +112,7 @@ if ($action === 'modifier_utilisateur') {
     // Rediriger vers la page d'administration
     header('Location: admin.php?suppression=1');
     exit();
-} elseif ($action === 'supprimer_categorie') {
+} elseif ($action === 'suppr' && $propriete === 'categorie') {
     $categorie_id = $_GET['categorie_id'];
 
     // Supprimer la catégorie de la base de données
@@ -119,8 +122,8 @@ if ($action === 'modifier_utilisateur') {
     // Rediriger vers la page d'administration
     header('Location: admin.php?suppression=1');
     exit();
-} elseif ($action === 'supprimer_plat') {
-    $categorie_id = $_GET['plat_id'];
+} elseif ($action === 'suppr' && $propriete === 'plat') {
+    $plat_id = $_GET['plat_id'];
     
     // Supprimer le plat de la base de données
     $query = "DELETE FROM plat WHERE ID_plat='$plat_id'";

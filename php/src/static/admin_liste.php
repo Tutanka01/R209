@@ -14,13 +14,19 @@ if ($propriete === 'user') {
     $type = 'plat';
     $label = 'Plats';
     $sql = "SELECT * FROM plat";
-} else {
+} elseif ($propriete === "Commandes"){
+    $type = 'commande';
+    $label = 'commande';
+    $sql = "SELECT * FROM commande";
+} 
+else {
     // Gérer le cas où la propriété n'est pas valide
     echo "Propriété non valide";
     exit;
 }
 
 $results = $db->query($sql);
+var_dump($results);
 ?>
 
 <!DOCTYPE html>
@@ -98,6 +104,13 @@ $results = $db->query($sql);
                 <span class="user-value"><?php echo $row['description']; ?></span>
                 <span class="user-field">Ingrédient :</span>
                 <span class="user-value"><?php echo $row['ingredient']; ?></span>
+            <?php elseif ($type === 'gestionnaire') : ?>
+                <span class="user-field">ID de la commande :</span>
+                <span class="user-value"><?php echo $row['ID_commande']; ?></span>
+                <span class="user-field">ID du user :</span>
+                <span class="user-value"><?php echo $row['ID_user']; ?></span>
+                <span class="user-field">ID du plat :</span>
+                <span class="user-value"><?php echo $row['ID_plat']; ?></span>
             <?php endif; ?>
 
             <div class="actions">
@@ -115,7 +128,7 @@ $results = $db->query($sql);
                 </form>
             </div>
             <div>
-                <form action="script_nouveau_admin.php" method="GET">
+                <form action="script_modifier_admin.php" method="GET">
                     <input type="hidden" name="action" value="suppr">
                     <input type="hidden" name="propriete" value="<?php echo $type; ?>">
                     <?php if ($type === 'user'): ?>
