@@ -15,8 +15,8 @@ if ($propriete === 'user') {
     $label = 'Plats';
     $sql = "SELECT * FROM plat";
 } elseif ($propriete === "Commandes"){
-    $type = 'commandes';
-    $label = 'commandes';
+    $type = 'commande';
+    $label = 'commande';
     $sql = "SELECT * FROM commande";
 } 
 else {
@@ -26,6 +26,7 @@ else {
 }
 
 $results = $db->query($sql);
+var_dump($results);
 ?>
 
 <!DOCTYPE html>
