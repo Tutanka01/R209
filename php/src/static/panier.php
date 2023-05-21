@@ -67,10 +67,10 @@ $total = 0;
         </div>
         <div class="commander">
             <?$plats = implode(',', $plats); // on transforme le tableau en string (séparé par des virgules)?>
-            <form action="script_commander.php" method="post">
+            <form action="script_ajout_retirer_panier.php" method="post">
                 <input type="hidden" name="total" value="<?php echo $total; ?>">
-                <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-                <input type="hidden" name="Id_plats" vvalue="<?php echo $plats; // par le moment ça ne marche pas les requttes post n'ont pas les ID_plats pour une raison totalement inconnue?>">
+                <input type="hidden" name="Id_plats" value="<?php echo $plats;?>">
+                <input type="hidden" name="action" value="commander">
                 <button>Commander</button>
             </form>
         </div>

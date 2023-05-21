@@ -8,8 +8,18 @@ if (!isset($_SESSION['user'])){
 $db = new SQLite3('sqlite.sqlite');
 $user = $_SESSION['user'];
 $id_user = $_SESSION['id_user'];
-$id_plat = $_GET['id_plat'];
-$action = $_GET['action'];
+
+if (isset($_GET['id_plat'])){
+    $id_plat = $_GET['id_plat'];
+} elseif (isset($_POST['id_plat'])){
+    $id_plat = $_POST['id_plat'];
+}
+
+if (isset($_GET['action'])){ // si l'action est dans l'URL
+    $action = $_GET['action'];
+} elseif (isset($_POST['action'])){ // si l'action est dans le formulaire  
+    $action = $_POST['action'];
+}
 
 if ($action == "ajouter") {
     // Vérification de l'existence du plat dans le panier
@@ -43,6 +53,12 @@ if ($action == "ajouter") {
             $_SESSION['is_remove'] = true;
         }
     }
+} elseif ($action === "commander"){
+    // insert la commande dans la table commande
+    $id_user = $_SESSION['id_user'];
+    $id_plat = $_POST['Id_plats'];
+    $sql = "INSERT INTO commande (ID_user, ID_plat) VALUES ('$id_user', '$id_plat')";
+    $db->query($sql);
 }
 
 // Redirection vers la page mainapage.php si il vient pas du panier sinon vers la page panier.php
