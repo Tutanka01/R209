@@ -72,7 +72,7 @@ INSERT INTO plat (nom_plat,specificite,prix,auteur,Lien,description,ingredient) 
 DROP TABLE IF EXISTS categorie;
 
 CREATE TABLE categorie
-    (ID_plat     TEXT PRIMARY KEY,
+    (ID_plat     INTEGER PRIMARY KEY AUTOINCREMENT,
      chaud   INTEGER NULL,
      froid   INTEGER NULL,
      entree  INTEGER NULL,
@@ -81,45 +81,47 @@ CREATE TABLE categorie
      
      FOREIGN KEY (ID_plat) REFERENCES plat (ID_plat));
 
-INSERT INTO categorie VALUES('P1',1,0,0,1,0);
-INSERT INTO categorie VALUES('P2',0,0,0,0,1);
-INSERT INTO categorie VALUES('P3',0,1,0,0,1);
-INSERT INTO categorie VALUES('P4',1,0,0,1,0);
-INSERT INTO categorie VALUES('P5',1,0,0,1,0);
-INSERT INTO categorie VALUES('P6',1,0,0,1,0);
-INSERT INTO categorie VALUES('P7',1,0,0,1,0);
-INSERT INTO categorie VALUES('P8',1,0,0,1,0);
-INSERT INTO categorie VALUES('P9',1,0,0,1,0);
-INSERT INTO categorie VALUES('P10',1,1,1,1,0);
-INSERT INTO categorie VALUES('P11',1,0,0,1,0);
-INSERT INTO categorie VALUES('P12',0,1,0,1,0);
-INSERT INTO categorie VALUES('P13',0,1,1,1,0);
-INSERT INTO categorie VALUES('P14',1,0,0,1,0);
-INSERT INTO categorie VALUES('P15',0,0,0,0,1);
-INSERT INTO categorie VALUES('P16',0,0,0,0,1);
-INSERT INTO categorie VALUES('P17',0,0,0,0,1);
-INSERT INTO categorie VALUES('P18',0,0,0,0,1);
-INSERT INTO categorie VALUES('P19',0,0,0,0,1);
-INSERT INTO categorie VALUES('P20',0,0,1,1,0);
-INSERT INTO categorie VALUES('P21',0,0,1,0,0);
-INSERT INTO categorie VALUES('P22',0,0,1,0,0);
-INSERT INTO categorie VALUES('P23',0,0,1,0,0);
-INSERT INTO categorie VALUES('P24',0,0,0,1,0);
-INSERT INTO categorie VALUES('P25',0,0,0,1,0);
-INSERT INTO categorie VALUES('P26',0,0,0,1,0);
-INSERT INTO categorie VALUES('P27',0,0,0,1,0);
-INSERT INTO categorie VALUES('P28',0,0,0,1,0);
-INSERT INTO categorie VALUES('P29',0,0,0,1,0);
-INSERT INTO categorie VALUES('P30',1,0,0,1,0);
-INSERT INTO categorie VALUES('P31', 0, 0, 0, 0, 1);
-INSERT INTO categorie VALUES('P33', 1, 0, 0, 1, 0);
-INSERT INTO categorie VALUES('P34', 0, 0, 1, 1, 0);
-INSERT INTO categorie VALUES('P35', 0, 1, 0, 1, 0);
-INSERT INTO categorie VALUES('P36', 0, 0, 1, 0, 0);
-INSERT INTO categorie VALUES('P37', 1, 0, 0, 1, 0);
-INSERT INTO categorie VALUES('P38', 0, 1, 1, 0, 0);
-INSERT INTO categorie VALUES('P39', 0, 0, 0, 0, 1);
-INSERT INTO categorie VALUES('P40', 0, 0, 1, 1, 0);
+INSERT INTO categorie (chaud, froid, entree, plat, dessert) 
+VALUES
+    (1, 0, 0, 1, 0),
+    (0, 0, 0, 0, 1),
+    (0, 1, 0, 0, 1),
+    (1, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (1, 1, 1, 1, 0),
+    (1, 0, 0, 1, 0),
+    (0, 1, 0, 1, 0),
+    (0, 1, 1, 1, 0),
+    (1, 0, 0, 1, 0),
+    (0, 0, 0, 0, 1),
+    (0, 0, 0, 0, 1),
+    (0, 0, 0, 0, 1),
+    (0, 0, 0, 0, 1),
+    (0, 0, 0, 0, 1),
+    (0, 0, 1, 1, 0),
+    (0, 0, 1, 0, 0),
+    (0, 0, 1, 0, 0),
+    (0, 0, 1, 0, 0),
+    (0, 0, 0, 1, 0),
+    (0, 0, 0, 1, 0),
+    (0, 0, 0, 1, 0),
+    (0, 0, 0, 1, 0),
+    (0, 0, 0, 1, 0),
+    (0, 0, 0, 1, 0),
+    (1, 0, 0, 1, 0),
+    (0, 0, 0, 0, 1),
+    (1, 0, 0, 1, 0),
+    (0, 0, 1, 1, 0),
+    (0, 1, 0, 1, 0),
+    (0, 0, 1, 0, 0),
+    (1, 0, 0, 1, 0),
+    (0, 1, 1, 0, 0),
+    (0, 0, 0, 0, 1),
+    (0, 0, 1, 1, 0);
 
 
 DROP TABLE IF EXISTS panier;
