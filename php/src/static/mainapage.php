@@ -57,7 +57,7 @@
         </form>
     </div>
     <?php
-// Code de connexion à votre base de données SQLite
+// Connexion à la base de données SQLite
 $db = new SQLite3('sqlite.sqlite');
 
 // Récupération des noms des colonnes (catégories) de la table 'categorie'
@@ -78,7 +78,7 @@ while ($row = $results->fetchArray()) {
     }
 }
 
-// Affichage des catégories dans votre HTML
+// Affichage des catégories
 echo '<div>';
 echo '<div class="lsite">';
 echo '<div class="container_lsite">';
