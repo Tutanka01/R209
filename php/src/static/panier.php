@@ -1,10 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])){
-    $error = "Vous êtes déjà connecté";
-    echo $error;
 } else {
-    header("Location: connexion.php");
+    header("Location: connexion.php?error=not_connected");
 }
 
 $user = $_SESSION['user'];
@@ -41,15 +39,18 @@ $total = 0;
                 <?php
                 $db = new SQLite3('sqlite.sqlite');
                 $total = 0;
-                $sql = "SELECT *
+                $plats = array(); // tableau contenant les ID des plats dans le panier
+                $sql = "SELECT * 
                         FROM plat
                         JOIN panier ON plat.ID_plat = panier.ID_plat
                         WHERE panier.ID_user = '".$id_user."'"; 
                 $results = $db->query($sql);
                 while ($row = $results->fetchArray()) {
-                    $montant = $row['QTE'] * $row['prix'];
-                    $total += $montant;
+                    $montant = $row['QTE'] * $row['prix']; // calcul du montant
+                    $total += $montant; // calcul du total
+                    $plats[] = $row['ID_plat']; // ajout de l'ID du plat dans le tableau
                     echo "<li>".$row['nom_plat']."<p> Prix unité : ".$row['prix']." €</p><p>Quantité : ".$row['QTE']."</p><p>Montant : ".$montant." €</p>
+                    <img src='".$row['Lien']."' alt='".$row['nom_plat']."'>
                     <form action='script_ajout_retirer_panier.php?action=retirer&id_plat=".$row['ID_plat']."&from_panier=1' method='post'>
                         <button>Retirer du panier</button>
                     </form>
@@ -65,7 +66,13 @@ $total = 0;
             <p>Total : <?php echo $total; ?> €</p>
         </div>
         <div class="commander">
-            <button>Commander</button>
+            <?$plats = implode(',', $plats); // on transforme le tableau en string (séparé par des virgules)?>
+            <form action="script_ajout_retirer_panier.php" method="post">
+                <input type="hidden" name="total" value="<?php echo $total; ?>">
+                <input type="hidden" name="Id_plats" value="<?php echo $plats;?>">
+                <input type="hidden" name="action" value="commander">
+                <button>Commander</button>
+            </form>
         </div>
     </div>
 </body>
