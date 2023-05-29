@@ -1,30 +1,6 @@
 # R209
-R209 - Web
+Projet HTML/PHP/SQL Site de vente en ligne
 
-## https://www.recettesdici.com/fr/categorie-de-plat/
-
-- [x] rechercher une catégorie
-
-- [x] page plat (mohamad, quasi fini) : ajouter une qte à ajouter au panier.
-
-- [x] Session (php), $_SESSION, pour track et mettre le panier besoin de login/mdp + 'nouvel utilisateur ?' (mohamad)
-
-- [x] panier link avec un user (mohamad)
-
-- [] Admin page (mohamad)
-
-- [] Liaison login admin -> admin page (mohamad)
-
-- [] Accès gestionnaire --> admin page (julein)
-
-- [] Filtre anti_injectionSQL (julien)
-
-- [] Avis des utilisateurs (mohamad)
-
-- [x] Plus de plats (Mohamad)//FIN
-
-- [] Avis (mohamad)
-  
 ## Pour acceder faire marcher le projet
 Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il y a des tutos sur internet pour les installer.
 - Cloner le repo
@@ -43,13 +19,13 @@ Bien sur il faudra avoir docker et docker-compose d'installé sur sa machine. Il
 - Aller sur http://localhost:8000
 ## Voila a quoi ça ressemble par le moment 
 Mainpage :
-![Mainpage](images/mainpage.png)
+![Mainapage](https://github.com/Tutanka01/R209/assets/40025011/b055b5a2-646e-446a-9652-2d104969c03d)
 
 Categories :
-![Cats](images/cats.png)
+![Categories](https://github.com/Tutanka01/R209/assets/40025011/537f1997-aea7-433d-81c6-c7b78932ae4a)
 
 Plats :
-![Plats](images/plats.png)
+![plats](https://github.com/Tutanka01/R209/assets/40025011/4417b868-c4ec-4bf4-aecb-c193b74511b7)
 
 Panier :
-![Panier](images/panier.png) 
+![Panier](https://github.com/Tutanka01/R209/assets/40025011/518172b1-ffd9-433f-9050-8e9ff97342dd)
