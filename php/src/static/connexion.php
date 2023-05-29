@@ -14,8 +14,10 @@
         } else {
         }
     }
-    if(isset($_GET['error']) && $_GET['error'] == "not_connected") {
+    if(isset($_GET['error']) && $_GET['error'] == "error_connexion") {
         echo "<script>alert('Vous devez vous connecter pour acceder au panier');</script>";
+    }elseif(isset($_GET['error']) && $_GET['error'] == "invalide"){
+        echo "<script>alert('Login ou mot de passe invalide');</script>";
     }
 ?>
 <!DOCTYPE html>

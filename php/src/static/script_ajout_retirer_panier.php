@@ -1,6 +1,6 @@
 <?session_start();
 if (!isset($_SESSION['user'])){
-    header("Location: connexion.php?error=Vous devez vous connecter pour ajouter un plat au panier");
+    header("Location: connexion.php?error=error_connexion");
     exit;
 } else {
 }?>
@@ -58,6 +58,9 @@ if ($action == "ajouter") {
     $id_user = $_SESSION['id_user'];
     $id_plat = $_POST['Id_plats'];
     $sql = "INSERT INTO commande (ID_user, ID_plat) VALUES ('$id_user', '$id_plat')";
+    $db->query($sql);
+    // supprime le panier de l'utilisateur
+    $sql = "DELETE FROM panier WHERE ID_user='$id_user'";
     $db->query($sql);
 }
 
