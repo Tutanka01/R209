@@ -65,6 +65,13 @@ if ($action === 'modifier_utilisateur') {
         } else {
             $perm = 'utilisateur';
         }
+        // Verifier si le nomUser exite deja
+        $query = "SELECT * FROM user WHERE login='$login'";
+        if ($db->querySingle($query) !== false) {
+            // Rediriger vers la page d'administration
+            header('Location: connexion.php?existe_deja=0');
+            exit();
+        }
         // Ajouter l'utilisateur dans la base de données
         $query = "INSERT INTO user (login, passwd, perm) VALUES ('$login', '$passwd', '$perm')";
         $db->exec($query);
@@ -96,7 +103,7 @@ if ($action === 'modifier_utilisateur') {
         $ingredient = $_POST['ingredient'];
 
         // Ajouter le plat dans la base de données
-        $query = "INSERT INTO plat (nom_plat, spécificité, prix, auteur, Lien, description, ingredient) VALUES ('$nom_plat', '$specificite', '$prix', '$auteur', '$lien', '$description', '$ingredient')";
+        $query = "INSERT INTO plat (nom_plat, specificite, prix, auteur, Lien, description, ingredient) VALUES ('$nom_plat', '$specificite', '$prix', '$auteur', '$lien', '$description', '$ingredient')";
         $db->exec($query);
 
         // Rediriger vers la page d'administration

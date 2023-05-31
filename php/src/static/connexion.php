@@ -16,6 +16,8 @@
     }
     if(isset($_GET['error']) && $_GET['error'] == "not_connected") {
         echo "<script>alert('Vous devez vous connecter pour acceder au panier');</script>";
+    }elseif (isset($_GET['existe_deja'])){
+        echo "<script>alert('Le user choisi existe deja, essayez un autre');</script>";
     }
 ?>
 <!DOCTYPE html>

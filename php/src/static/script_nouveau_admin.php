@@ -181,7 +181,7 @@ if (isset($action) && $action === 'modif') {
                 <input type='text' id='auteur' name='auteur' value='{$plat['auteur']}' required>
 
                 <label for='lien'>Lien :</label>
-                <input type='text' id='lien' name='lien' value='{$plat['Lien']}' required>
+                <input type='file' id='lien' name='lien' value='{$plat['Lien']}' required>
 
                 <label for='description'>Description :</label>
                 <textarea id='description' name='description' required>{$plat['description']}</textarea>
@@ -338,7 +338,7 @@ if (isset($action) && $action === 'modif') {
                 <label for='auteur'>Auteur :</label>
                 <input type='text' id='auteur' name='auteur' required>
 
-                <label for='lien'>Lien :</label>
+                <label for='lien'>Lien : </label>
                 <input type='text' id='lien' name='lien' required>
 
                 <label for='description'>Description :</label>
