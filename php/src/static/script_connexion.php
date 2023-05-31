@@ -38,7 +38,7 @@ if (isset($_POST['user']) && isset($_POST['mdp'])) {
         }
     } else {
         // Si l'utilisateur n'est pas valide, une erreur est stockée et l'utilisateur est redirigé vers la page de connexion avec le message d'erreur
-        $error = "Identifiant ou mot de passe invalide";
+        $error = "invalide";
         header("Location: connexion.php?error=$error");
     }
 }
