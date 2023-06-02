@@ -91,8 +91,6 @@ $results = $db->query($sql);
             <?php elseif ($type === 'plat'): ?>
                 <span class="user-field">Nom du plat :</span>
                 <span class="user-value"><?php echo $row['nom_plat']; ?></span>
-                <span class="user-field">Spécificité :</span>
-                <span class="user-value"><?php echo $row['spécificité']; ?></span>
                 <span class="user-field">Prix :</span>
                 <span class="user-value"><?php echo $row['prix']; ?></span>
                 <span class="user-field">Auteur :</span>
